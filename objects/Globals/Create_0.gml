@@ -38,5 +38,9 @@ global.shakeAmount = 0.3;
 global.returningToMenu = false;
 
 // Global entities - these will display as values until objs are created
-global.mouseController = MouseController;
+global.MouseController = MouseController;
 global.floatController = FloatController;
+global.personGrabbed = Person;
+global.bloodOverlay = BloodOverlay;
+global.ambientController = AmbientController;
+global.gameEndController = GameEndController;
