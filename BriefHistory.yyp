@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"MouseController","path":"objects/MouseController/MouseController.yy",},"order":1,},
+    {"id":{"name":"Globals","path":"objects/Globals/Globals.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
