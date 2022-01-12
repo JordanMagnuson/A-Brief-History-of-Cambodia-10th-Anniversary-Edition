@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description Init Global Variables
 // You can write your code in this editor
 
 
@@ -10,8 +10,9 @@ global.NUMBER_OF_PEOPLE = 8;
 global.PHASE_DELAY_DIVIDER = 200;
 global.UNDERWATER_ALPHA = 0.4;
 
-global.PERSON_WIDTH = 10;
-global.PERSON_HEIGHT = 10;
+//global.PERSON_WIDTH = 10;		//Replaced with
+//global.PERSON_HEIGHT = 10;	//10 by 10 sprite
+
 global.BASE_HEALTH = 100;
 global.HEALTH_VARIATIONHEALTH_VARIATION = 25
 global.MIN_HEALTH = 50;
