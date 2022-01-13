@@ -1,3 +1,11 @@
+terrified = false;
+
+//Breathing-related vars
+floating = true;
+bScale = .15;	//inhale/exhale limits
+bDuration = .5;	//breathes per second
+bStep = 0;		//timestep
+
 // Params: none
 // Returns: none
 // Description: moves instance away from player
