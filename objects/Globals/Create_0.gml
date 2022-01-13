@@ -14,7 +14,7 @@ global.UNDERWATER_ALPHA = 0.4;
 //global.PERSON_HEIGHT = 10;	//10 by 10 sprite
 
 global.BASE_HEALTH = 100;
-global.HEALTH_VARIATIONHEALTH_VARIATION = 25
+global.HEALTH_VARIATION = 25;
 global.MIN_HEALTH = 50;
 global.FADE_HEALTH = 60;
 global.HEALTH_LOSS_RATE = 0.05;
@@ -40,8 +40,8 @@ global.returningToMenu = false;
 
 // Global entities - these will display as values until objs are created
 global.MouseController = MouseController;
-global.floatController = FloatController;
-global.personGrabbed = Person;
-global.bloodOverlay = BloodOverlay;
-global.ambientController = AmbientController;
-global.gameEndController = GameEndController;
+//global.floatController = FloatController;
+//global.personGrabbed = Person;
+//global.bloodOverlay = BloodOverlay;
+//global.ambientController = AmbientController;
+//global.gameEndController = GameEndController;
