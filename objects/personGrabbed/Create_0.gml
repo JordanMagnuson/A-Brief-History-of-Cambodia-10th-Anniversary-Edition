@@ -53,6 +53,7 @@ function update()
 	}
 	// else if heartbeat sound is playing then fade heartbeet away and stop drowning sound
 	
+	
 	//call person update	
 }
 
