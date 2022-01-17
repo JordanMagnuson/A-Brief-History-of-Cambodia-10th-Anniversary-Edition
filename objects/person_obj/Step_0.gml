@@ -36,3 +36,4 @@ else
 	bScale = .15;
 	bDuration = .5;
 }
+

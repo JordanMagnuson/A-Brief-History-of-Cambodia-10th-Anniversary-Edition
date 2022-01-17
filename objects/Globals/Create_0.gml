@@ -41,7 +41,7 @@ global.returningToMenu = false;
 // Global entities - these will display as values until objs are created
 global.MouseController = MouseController;
 //global.floatController = FloatController;
-//global.personGrabbed = Person;
+global.personGrabbed = person_obj;
 //global.bloodOverlay = BloodOverlay;
 //global.ambientController = AmbientController;
 //global.gameEndController = GameEndController;
