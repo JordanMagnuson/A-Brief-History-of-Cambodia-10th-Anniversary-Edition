@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"personGrabbed","path":"objects/personGrabbed/personGrabbed.yy",},"order":3,},
+    {"id":{"name":"personFloating","path":"objects/personFloating/personFloating.yy",},"order":4,},
     {"id":{"name":"MouseController","path":"objects/MouseController/MouseController.yy",},"order":1,},
     {"id":{"name":"mouse_hand","path":"sprites/mouse_hand/mouse_hand.yy",},"order":1,},
     {"id":{"name":"Globals","path":"objects/Globals/Globals.yy",},"order":0,},
@@ -54,7 +55,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.7.606",
   },
   "resourceVersion": "1.4",
   "name": "BriefHistory",
