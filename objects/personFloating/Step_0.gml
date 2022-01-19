@@ -38,7 +38,7 @@ if (scared)
 }
 
 
-
+//FOR TESTING
 if(keyboard_check_pressed(vk_space))
 {
 	scare();

@@ -6,14 +6,13 @@ a = .1;			//accel	in air
 aWater = .15;	//deccel in water
 v = 0;			// velocity
 hitWater = false;
-angleDir = irandom(1);
-if(angleDir < 1)
-	angleDir = -1;
+angleDir = choose(-1, 1);
 
 
 
 function changeToSwimmer()
 {
-	instance_create_depth(x, y, depth, personFloating);	//TODO: Replace with personSwimming when completed
+	s = instance_create_depth(x, y, depth, personSwimming);
+	s.image_angle = image_angle;
 	instance_destroy(self);			
 }

@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"personGrabbed","path":"objects/personGrabbed/personGrabbed.yy",},"order":3,},
     {"id":{"name":"personFloating","path":"objects/personFloating/personFloating.yy",},"order":4,},
+    {"id":{"name":"personSwimming","path":"objects/personSwimming/personSwimming.yy",},"order":6,},
     {"id":{"name":"personFalling","path":"objects/personFalling/personFalling.yy",},"order":5,},
     {"id":{"name":"MouseController","path":"objects/MouseController/MouseController.yy",},"order":1,},
     {"id":{"name":"mouse_hand","path":"sprites/mouse_hand/mouse_hand.yy",},"order":1,},
