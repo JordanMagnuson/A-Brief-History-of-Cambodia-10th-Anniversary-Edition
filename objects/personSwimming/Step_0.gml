@@ -29,15 +29,13 @@ if(alarm_get(2) <= 0)
 	}
 
 //the time it takes the person to move to the desired point (in frames)
-	var mt = room_speed * (distance_to_point(x+xDist, y+yDist)/SWIM_SPEED);
+	 mt = room_speed * (distance_to_point(x+xDist, y+yDist)/SWIM_SPEED);
 	alarm_set(2, mt);
 }
 
-
-var mt = room_speed * (distance_to_point(x+xDist, y+yDist)/SWIM_SPEED);
 //how much time has passed, as a proportion of total time alloted
 var t = (mt - alarm_get(2)) / mt;
-if(t >= .5)
+if(t > .5)
 {
 	y = initY - yDist * (1 - (t-1) * (t-1) * 2);	// Quadratic movement per FlashPunk
 	x = initX + xDist * (1 - (t-1) * (t-1) * 2);

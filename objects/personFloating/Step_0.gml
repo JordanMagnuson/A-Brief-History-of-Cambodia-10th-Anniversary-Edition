@@ -36,10 +36,3 @@ if (scared)
 	else
 		x = initialX + xChange * (1 - (t-1) * (t-1) * 2);	// Quadratic movement per FlashPunk
 }
-
-
-//FOR TESTING
-if(keyboard_check_pressed(vk_space))
-{
-	scare();
-}

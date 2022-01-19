@@ -9,7 +9,7 @@ hitWater = false;
 angleDir = choose(-1, 1);
 
 
-
+//Function for changing to swimmer when person hits the water
 function changeToSwimmer()
 {
 	s = instance_create_depth(x, y, depth, personSwimming);
