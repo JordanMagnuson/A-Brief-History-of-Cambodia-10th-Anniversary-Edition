@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "mouse_hand",
+    "path": "sprites/mouse_hand/mouse_hand.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

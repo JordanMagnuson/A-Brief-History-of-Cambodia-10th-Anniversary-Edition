@@ -26,7 +26,8 @@ var overlapPerson = instance_place(x,y,person_obj);
 if(overlapPerson != noone && mouse_check_button(mb_left))
 {
 	//play audio
-	instance_create_depth(overlapPerson.x,overlapPerson.y,1,personGrabbed);
+	global.personGrabbed = instance_create_depth(overlapPerson.x,overlapPerson.y,1,personGrabbed);
+	//show_debug_message("object grabbed destroyed")
 	instance_destroy(overlapPerson);
 }
 else if( mouse_check_button_released(mb_left))
@@ -57,6 +58,7 @@ else if( mouse_check_button_released(mb_left))
 			swimmer.Health = global.personGrabbed.Health;
 			swimmer.maxHealth = global.personGrabbed.maxHealth;
 		}
+		show_debug_message("object grabbed destroyed")
 		instance_destroy(global.personGrabbed);
 		global.personGrabbed = noone;
 	}
@@ -65,7 +67,7 @@ else if( mouse_check_button_released(mb_left))
 //sprite change
 if(global.personGrabbed != noone)
 {
-	sprite_index = 1; // closed hand sprite
+	//sprite_index = 1; // closed hand sprite
 	if (y > global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION && lastY < global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION)
 	{
 		//audio play for plunge sound	
@@ -73,11 +75,11 @@ if(global.personGrabbed != noone)
 }
 else if(overlapPerson != noone)
 {
-	sprite_index = 0; //open hand sprite
+	//sprite_index = 0; //open hand sprite
 }
 else
 {
-		sprite_index = 0; // two if statements check for this may not be needed
+		//sprite_index = 0; // two if statements check for this may not be needed
 }
 
 if (global.personGrabbed && global.personGrabbed.y > global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION)
