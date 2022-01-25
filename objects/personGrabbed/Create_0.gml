@@ -6,6 +6,7 @@ fading = false;
 dead = false;
 angle = 0;
 maxHealth = 100;
+Health = 100;
 
 x = 0;
 y = 0;
@@ -30,25 +31,25 @@ function update()
 	
 	if( y > floatLevel + global.FLOAT_LEVEL_VARIATION)
 	{
-		if(health > global.MIN_HEALTH)
+		if(Health > global.MIN_HEALTH)
 		{
-			health -= global.HEALTH_LOSS_RATE;	
+			Health -= global.HEALTH_LOSS_RATE;	
 		}
 		
-		if(health > 52)
+		if(Health > 52)
 		{
 			//if statement for playing heartbeet sounds	
 			
 		}
-		else if (health > global.MIN_HEALTH && !fading)
+		else if (Health > global.MIN_HEALTH && !fading)
 		{
 			fading = true;
 			//audio for stopping heartbeat sound	
 		}
-		else if (health < global.MIN_HEALTH && !dead)
+		else if (Health < global.MIN_HEALTH && !dead)
 		{
 			dead = true;
-			health = global.MIN_HEALTH - 1;
+			Health = global.MIN_HEALTH - 1;
 		}
 	}
 	// else if heartbeat sound is playing then fade heartbeet away and stop drowning sound

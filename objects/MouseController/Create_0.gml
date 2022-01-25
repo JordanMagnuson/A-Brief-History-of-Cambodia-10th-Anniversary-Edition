@@ -38,7 +38,7 @@ function jerkAway()
 			//stopJerking();
 			return;
 	}
-	if(global.personGrabbed.Health <= Global.MIN_HEALTH)
+	if(global.personGrabbed.Health <= global.MIN_HEALTH)
 	{
 		//stopJerking();
 		return;
@@ -46,7 +46,7 @@ function jerkAway()
 	
 	if(random_range(0,1) * jerkRadius > 2.5)
 	{
-		//releasebubble	
+		releaseBubble()
 	}
 	
 	if(global.personGrabbed.Health > global.FADE_HEALTH)

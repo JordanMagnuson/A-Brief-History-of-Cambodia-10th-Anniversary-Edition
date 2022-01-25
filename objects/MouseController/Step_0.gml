@@ -8,6 +8,7 @@ if(instance_exists(MouseController))
 	alarm[1] = room_speed * 1; //this is for 1 second, may need to be adjusted
 }
 
+
 //update status
 
 if(jerking)
@@ -23,15 +24,23 @@ else
 
 var overlapPerson = instance_place(x,y,person_obj);
 
+
+
 if(overlapPerson != noone && mouse_check_button(mb_left))
 {
+	sprite_index = hand_closed;
 	//play audio
 	global.personGrabbed = instance_create_depth(overlapPerson.x,overlapPerson.y,1,personGrabbed);
 	//show_debug_message("object grabbed destroyed")
+	//show_debug_message(string(global.personGrabbed.y) + "compared to: " + string(global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION))
+	global.personGrabbed.y = y;
+	global.personGrabbed.x = x;
+	global.personGrabbed.Health = overlapPerson.Health;
 	instance_destroy(overlapPerson);
 }
 else if( mouse_check_button_released(mb_left))
 {
+	
 	if(jerking)
 	{
 		stopJerking();	
@@ -75,19 +84,29 @@ if(global.personGrabbed != noone)
 }
 else if(overlapPerson != noone)
 {
-	//sprite_index = 0; //open hand sprite
+	sprite_index = mouse_hand;
 }
 else
 {
-		//sprite_index = 0; // two if statements check for this may not be needed
+	sprite_index = mouse_hand;
 }
 
-if (global.personGrabbed && global.personGrabbed.y > global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION)
+
+if(global.personGrabbed != noone)
 {
+	show_debug_message(string(global.personGrabbed.y))
+}
+
+if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION))
+{
+	show_debug_message("jerking away if statement")
+	show_debug_message(string(global.personGrabbed.Health))
+	jerkAway();
 	if(!jerking && !preparingToJerk)
 	{
 		if (global.personGrabbed.Health < global.personGrabbed.maxHealth * 0.9)
 		{
+			show_debug_message("jerking away")
 			jerkAway();
 		}
 		else if (global.personGrabbed.Health > global.MIN_HEALTH)
