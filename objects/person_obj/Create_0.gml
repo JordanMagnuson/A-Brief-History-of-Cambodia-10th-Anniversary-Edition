@@ -12,9 +12,6 @@ terrified = false;
 
 
 
-// Params: none
-// Returns: none
-// Description: moves instance away from player
 scared = false;	//	Boolean for scared
 initialX = -1;	//	the initial x value when scared
 xChange = -1;	//	the amount the instance is going to move

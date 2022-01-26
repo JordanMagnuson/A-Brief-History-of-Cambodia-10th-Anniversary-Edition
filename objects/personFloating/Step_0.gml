@@ -13,6 +13,36 @@ var scale = 1 + bScale * cos(pi * bDuration * t);
 image_xscale = scale;
 image_yscale = scale;
 
+//New Person Has been killed
+if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController) < global.scareDistance or keyboard_check_pressed(vk_space))
+{
+	deadSoFar = global.peopleKilled;
+	//Terrify Person, set unterrify alarm
+	switch(global.peopleKilled)
+	{
+		case 0:
+			alarm_set(1, 5 * room_speed);
+			break;
+		case 1:
+			alarm_set(1, 8 * room_speed);
+			break;
+		case 2:
+			alarm_set(1, 12 * room_speed);
+			break;
+		case 3:
+			alarm_set(1, 15 * room_speed);
+			break;
+		case 4:
+			alarm_set(1, 20 * room_speed);
+			break;
+		//Never unterrify
+		default:
+			break;
+	}
+	terrify();
+	scare();
+}
+
 //Breathing when terrified
 if(terrified)
 {
