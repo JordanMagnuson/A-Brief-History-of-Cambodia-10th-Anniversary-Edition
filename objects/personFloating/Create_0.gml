@@ -2,8 +2,9 @@
 event_inherited();
 
 //Breathing-related vars
-bScale = .15;	//inhale/exhale limits
-bDuration = .5;	//breathes per second
+bScale = .15;	//inhale/exhale scale limits
+bDuration = .5;	//time in seconds for breath to take
+bDir = 1;		// breathe in or out
 bStep = 0;		//timestep
 
 //terrify-related vars
