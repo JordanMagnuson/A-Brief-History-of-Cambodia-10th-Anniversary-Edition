@@ -55,6 +55,12 @@ else
 	bDuration = .5;
 }
 
+if(shaking)
+{
+	x += choose(shakeAmount, -shakeAmount);
+	y += choose(shakeAmount, -shakeAmount);
+}
+
 //Do movement if scared
 if (scared)
 {

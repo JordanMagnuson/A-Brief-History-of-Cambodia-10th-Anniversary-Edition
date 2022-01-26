@@ -7,7 +7,7 @@ bDuration = .5;	//breathes per second
 bStep = 0;		//timestep
 
 //terrify-related vars
-shaking = true;
+shaking = false;
 shakeAmount = global.shakeAmount;
 
 deadSoFar = 0;
