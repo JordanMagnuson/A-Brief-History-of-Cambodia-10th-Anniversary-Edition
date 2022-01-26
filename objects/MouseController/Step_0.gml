@@ -5,7 +5,8 @@ if(instance_exists(MouseController))
 	window_set_cursor(cr_none);
 	x = mouse_x;
 	y = mouse_y;
-	alarm[1] = room_speed * 1; //this is for 1 second, may need to be adjusted
+	//alarm[1] = room_speed * 1; //this is for 1 second, may need to be adjusted
+	jerkAway()
 }
 
 
@@ -92,16 +93,12 @@ else
 }
 
 
-if(global.personGrabbed != noone)
-{
-	show_debug_message(string(global.personGrabbed.y))
-}
 
 if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION))
 {
-	show_debug_message("jerking away if statement")
-	show_debug_message(string(global.personGrabbed.Health))
-	jerkAway();
+	//show_debug_message("jerking away if statement")
+	//show_debug_message(string(preparingToJerk))
+	//show_debug_message(string(jerking))
 	if(!jerking && !preparingToJerk)
 	{
 		if (global.personGrabbed.Health < global.personGrabbed.maxHealth * 0.9)
@@ -112,7 +109,8 @@ if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrab
 		else if (global.personGrabbed.Health > global.MIN_HEALTH)
 		{
 			preparingToJerk = true;
-			alarm[1] = room_speed * 2;
+			//alarm[1] = room_speed * 2;
+			jerkAway()
 		}
 	}
 }
@@ -133,5 +131,7 @@ else
 {
 	image_alpha = 1;	
 }
+
+
 
 lastY = y;

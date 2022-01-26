@@ -20,7 +20,8 @@ preparingToJerk = false;
 jerking = false;
 jerkDuration = 0.08;
 jerkRadius = noone;
-jerkAlarm = alarm[1];
+alarm[1] = room_speed;
+alarm[0] = room_speed;
 lastY = 0;
 jerkX = noone;
 jerkY = noone;
@@ -84,7 +85,7 @@ function stopJerking()
 	alarm[1] = -1; //end alarm
 	jerking = false;			
 	preparingToJerk = false;
-	speed = 0; //stop movement speed of object
+	//speed = 0; //stop movement speed of object
 	
 }
 

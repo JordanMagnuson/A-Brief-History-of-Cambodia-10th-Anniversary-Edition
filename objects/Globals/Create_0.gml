@@ -10,6 +10,8 @@ global.NUMBER_OF_PEOPLE = 8;
 global.PHASE_DELAY_DIVIDER = 200;
 global.UNDERWATER_ALPHA = 0.4;
 
+global.enteredalarm = 0;
+
 //global.PERSON_WIDTH = 10;		//Replaced with
 //global.PERSON_HEIGHT = 10;	//10 by 10 sprite
 
