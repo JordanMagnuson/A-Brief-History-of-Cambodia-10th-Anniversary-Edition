@@ -1,0 +1,2 @@
+/// @description make wave
+newWave();

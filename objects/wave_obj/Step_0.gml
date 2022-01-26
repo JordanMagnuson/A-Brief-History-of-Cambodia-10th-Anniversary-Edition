@@ -9,4 +9,3 @@ else
 {
 	image_alpha = person_obj.quadInOut(t, 1, -1, -dir);
 }
-show_debug_message(image_alpha);
