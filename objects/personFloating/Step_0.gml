@@ -38,16 +38,16 @@ if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController
 	scare();
 }
 
-//Breathing when terrified
+//Breathing when terrified TODO: implement breath scale changes
 if(terrified)
 {
 	bScale = .25;
-	bDuration = 1.5;
+	bDuration = .5;
 }
 else
 {
-	bScale = .15;
-	bDuration = .5;
+	bScale = .1;
+	bDuration = 3;
 }
 
 if(shaking)
