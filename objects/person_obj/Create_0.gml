@@ -52,5 +52,5 @@ function quadInOut(t, initialVal, change, dir)
 	if(t <= .5)
 		return initialVal + dir * change * (t * t * 2);	// Quadratic movement per FlashPunk
 	else
-		return initialVal + dir * (1 - (t-1) * (t-1) * 2);	// Quadratic movement per FlashPunk
+		return initialVal + dir * change * (1 - (t-1) * (t-1) * 2);	// Quadratic movement per FlashPunk
 }

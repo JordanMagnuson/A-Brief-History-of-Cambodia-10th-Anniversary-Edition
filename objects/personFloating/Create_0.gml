@@ -6,6 +6,7 @@ bScale = .15;	//inhale/exhale scale limits
 bDuration = .5;	//time in seconds for breath to take
 bDir = 1;		// breathe in or out
 bStep = 0;		//timestep
+alarm_set(2, bDuration * room_speed);
 
 //terrify-related vars
 shaking = false;
@@ -21,8 +22,8 @@ function terrify()
 		terrified = true;
 		shaking = true;
 		shakeAmount = global.peopleKilled / global.NUMBER_OF_PEOPLE;
-		breathScale = 0.3;
-		breathDuration = 0.5;	
+		bScale = 0.3;
+		bDuration = 0.5;	
 }
 
 function unterrify()

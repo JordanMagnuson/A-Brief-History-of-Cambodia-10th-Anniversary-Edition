@@ -31,14 +31,7 @@ if(alarm_get(2) <= 0)
 
 //how much time has passed, as a proportion of total time alloted
 var t = (mt - alarm_get(2)) / mt;
-if(t > .5)
-{
-	y = initY - yDist * (1 - (t-1) * (t-1) * 2);	// Quadratic movement per FlashPunk
-	x = initX + xDist * (1 - (t-1) * (t-1) * 2);
-}
-else
-{
-	y = initY - yDist * (t * t * 2);	// Quadratic movement per FlashPunk
-	x = initX + xDist * (t * t * 2);
-}
+
+x = quadInOut(t, initX, xDist, 1);
+y = quadInOut(t, initY, yDist, -1);
 

@@ -2,14 +2,9 @@
 event_inherited();
 
 //Do breathing
-bStep += bDuration;
-if(bStep > room_speed)
-{
-	bStep = 0;
-}
-var t = bStep/room_speed;
-var scale = 1 + bScale * cos(pi * bDuration * t);
-		
+var t = (bDuration * room_speed - alarm_get(2)) / (bDuration * room_speed);
+var scale = quadInOut(t, 1 - (bDir * bScale), 2*bScale, bDir);
+
 image_xscale = scale;
 image_yscale = scale;
 
