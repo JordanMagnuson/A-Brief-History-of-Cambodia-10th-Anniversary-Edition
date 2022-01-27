@@ -52,7 +52,7 @@ function unterrify()
 function floatYcalc()
 {	
 	//Select a y-value to "float" to
-	floatY = -1 * (MIN_FLOAT_Y + random(1) * (MAX_FLOAT_Y - MIN_FLOAT_Y));
+	floatY = -floatYDir * (MIN_FLOAT_Y + random(1) * (MAX_FLOAT_Y - MIN_FLOAT_Y));
 	if (y + floatY < minY)
 	{
 		//too high
@@ -64,6 +64,7 @@ function floatYcalc()
 		floatY = maxY - y;
 	}
 	initY = y;
+	show_debug_message(floatY);
 }
 
 function floatXcalc()

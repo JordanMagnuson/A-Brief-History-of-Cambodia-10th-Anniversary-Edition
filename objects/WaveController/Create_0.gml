@@ -9,7 +9,7 @@ function newWave(alarm)
 	{
 		lastWave = currentWave;
 	}
-	xPos = xVar - xVar + random(1) * (2 * xVar);
+	xPos = random(1) * (2 * xVar);
 	yPos = global.WATER_LINE - yVar + random(1) * (2 * yVar);
 	currentWave = instance_create_layer(xPos, yPos, layer, wave_obj);
 	

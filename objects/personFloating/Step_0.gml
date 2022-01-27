@@ -67,4 +67,4 @@ if (scared)
 var ty = ((FLOAT_DURATION*room_speed) - alarm_get(3)) / (FLOAT_DURATION * room_speed);
 var tx = ((FLOAT_DURATION*room_speed*2) - alarm_get(4)) / (FLOAT_DURATION * room_speed*2);
 x = quadInOut(tx, initX, floatX, 1);
-y = quadInOut(ty, initY, floatY, floatYDir);
+y = quadInOut(ty, initY, floatY, 1);
