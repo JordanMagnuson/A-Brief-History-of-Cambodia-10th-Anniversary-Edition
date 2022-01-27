@@ -1,2 +1,2 @@
 /// @description make wave
-newWave(0);
+newWave(2);
