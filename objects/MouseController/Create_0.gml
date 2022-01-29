@@ -25,9 +25,16 @@ alarm[0] = room_speed;
 lastY = 0;
 jerkX = noone;
 jerkY = noone;
-
+mover = noone;
 
 //constructor will be taken care of in sprite settings
+
+function added()
+{
+	alarm[1] = room_speed * 1;
+	
+}
+
 
 function jerkAway()
 {
@@ -66,7 +73,10 @@ function jerkAway()
 	jerkY = sqrt(jerkRadius * jerkRadius - jerkX * jerkX) * -1;
 	//mover
 	//begin moving
-	move_towards_point(x + jerkX, y + jerkY,jerkDuration); //this might work as a translation of flash punk linear motion
+	mover = instance_create_depth(x,y,depth,Mover)
+	var jerkspeed = distance_to_point(x +jerkX,y +jerkY) / jerkDuration
+	mover.moveTo(x+jerkX,y+jerkY,jerkDuration)
+	//move_towards_point(x + jerkX, y + jerkY,jerkDuration); //this might work as a translation of flash punk linear motion
 	//needs more testing
 }
 
@@ -85,6 +95,7 @@ function stopJerking()
 	alarm[1] = -1; //end alarm
 	jerking = false;			
 	preparingToJerk = false;
+	mover = noone;
 	//speed = 0; //stop movement speed of object
 	
 }

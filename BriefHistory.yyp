@@ -8,6 +8,7 @@
     {"id":{"name":"WaveController","path":"objects/WaveController/WaveController.yy",},"order":8,},
     {"id":{"name":"personGasping","path":"objects/personGasping/personGasping.yy",},"order":7,},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":2,},
+    {"id":{"name":"Mover","path":"objects/Mover/Mover.yy",},"order":10,},
     {"id":{"name":"MouseController","path":"objects/MouseController/MouseController.yy",},"order":1,},
     {"id":{"name":"wave_obj","path":"objects/wave_obj/wave_obj.yy",},"order":9,},
     {"id":{"name":"mouse_hand","path":"sprites/mouse_hand/mouse_hand.yy",},"order":1,},

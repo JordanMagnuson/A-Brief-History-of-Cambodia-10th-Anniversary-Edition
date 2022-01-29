@@ -1,21 +1,16 @@
 
 
-if(instance_exists(MouseController))
-{
+
 	window_set_cursor(cr_none);
-	x = mouse_x;
-	y = mouse_y;
-	//alarm[1] = room_speed * 1; //this is for 1 second, may need to be adjusted
-	jerkAway()
-}
+
 
 
 //update status
 
-if(jerking)
+if(jerking && mover != noone)
 {
-	x = x+jerkX;
-	y = y + jerkY;
+	x = mover.x
+	y = mover.y
 }
 else
 {
@@ -109,8 +104,8 @@ if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrab
 		else if (global.personGrabbed.Health > global.MIN_HEALTH)
 		{
 			preparingToJerk = true;
-			//alarm[1] = room_speed * 2;
-			jerkAway()
+			alarm[1] = room_speed * 2;
+			//jerkAway()
 		}
 	}
 }
