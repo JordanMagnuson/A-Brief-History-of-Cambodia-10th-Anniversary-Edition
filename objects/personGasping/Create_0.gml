@@ -12,15 +12,15 @@ FLOAT_DURATION  = 1;	// Used INSTEAD of FLOAT_SPEED, depending on which you want
 MIN_ANGLE_CHANGE  = 0;
 MAX_ANGLE_CHANGE  = 0;
 
-var floatXDirection;
-var floatX;
-var floatY;
-var angleChange;
-var breathDuration = 0.5;
-var breathScale = 0.3;
+floatXDirection = noone;
+floatX = noone;
+floatY = noone;
+angleChange = noone;
+//breathDuration = 0.5;
+breathScale = 0.3;
 
-var firstGasp = true;
-var healthyAgain = false;
+firstGasp = true;
+healthyAgain = false;
 
 //sound
 
@@ -28,6 +28,21 @@ alarm[0] = room_speed;
 
 Health = 100;
 maxHealth = 100;
+
+
+function added()
+{
+floatDown();
+breatheIn(0.1);
+//sndSplashUp.play();
+			
+			// heartbeat
+//heartbeatFader = new SfxFader(sndHeartbeat, stopHearbeat);
+//addTween(heartbeatFader);
+//heartbeatFader.fadeTo(0, 2);
+			
+}
+
 
 function playGaspingSound()
 {
@@ -53,6 +68,49 @@ function scaredMoverCallback()
 			
 	}
 }	
+
+
+ function changeToFloater()
+		{
+			
+			//addTween(sndGaspingFader);
+			//sndGaspingFader.fadeTo(0, 10, Ease.quadIn);
+			
+			var floater = instance_create_depth(x,y,depth,personFloating)
+			
+			floater.breathDuration = breathDuration;
+			floater.breathScale = breathScale;
+			floater.image_xscale = image_xscale
+			floater.image_yscale = image_yscale
+			floater.terrify();
+			floater.shakeAmount = shakeAmount;
+			
+			alarm[0] = -1; //end float alarm
+			instance_destroy()
+			
+		}
+
+function breatheIn(duration)
+		{
+			breathDirection = 1;
+			//trace('breathe in');
+			if (duration == 0) 
+				duration = breathDuration;
+			// Scale tween
+			image_xscale = 1 + breathScale;
+			image_yscale = image_xscale;
+		}
+
+ function breatheOut()
+	{
+		breathDirection = -1;
+			
+		
+		image_xscale = 1 - breathScale;
+		image_yscale = image_xscale;
+			//breathScale -= BREATH_SCALE_CHANGE;
+			//breathDuration += BREATH_DURATION_CHANGE;			
+	}
 
 function getFloaterDelay()
 		{
@@ -128,3 +186,15 @@ function getFloaterDelay()
 			angleChange *= -floatXDirection;
 			image_angle += sin(degtorad(angleChange - image_angle))*duration
 		}
+		
+		 function floatUp()
+		{
+			
+			var duration = FLOAT_DURATION * 1;
+			
+			move_towards_point(x+floatX,y - floatY,duration)
+			
+			// Angle tween
+			
+			image_angle += sin(degtorad((-angleChange) - image_angle))*duration
+		}	
