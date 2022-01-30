@@ -2,21 +2,14 @@
 // You can write your code in this editor
 
 
-function moveTo(startx, starty, travelTime)
+Xdest = noone;
+ydest = noone;
+
+
+function beginMovement(distantx, distanty, duration)
 {
-		//convert to path functions instead of move towards point, currently
-		//will not stop as the jerk function stops calling this function before it can
-		//reach the else statement
-		show_debug_message(distance_to_point(startx,starty))
-		if(distance_to_point(startx,starty) > travelTime)
-		{
-			move_towards_point(startx,starty,travelTime)
-		}
-		else
-		{
-			show_debug_message("destroyed mover")
-			instance_destroy()
-			speed = 0;
-		}
-		
+		Xdest = distantx;
+		ydest = distanty;
+		alarm[0] = room_speed * duration;
+	
 }

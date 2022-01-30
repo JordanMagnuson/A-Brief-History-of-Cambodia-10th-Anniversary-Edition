@@ -74,8 +74,7 @@ function jerkAway()
 	//mover
 	//begin moving
 	mover = instance_create_depth(x,y,depth,Mover)
-	var jerkspeed = distance_to_point(x +jerkX,y +jerkY) / jerkDuration
-	mover.moveTo(x+jerkX,y+jerkY,jerkDuration)
+	mover.beginMovement(x + jerkX, y  + jerkY,jerkDuration)
 	//move_towards_point(x + jerkX, y + jerkY,jerkDuration); //this might work as a translation of flash punk linear motion
 	//needs more testing
 }
@@ -95,6 +94,7 @@ function stopJerking()
 	alarm[1] = -1; //end alarm
 	jerking = false;			
 	preparingToJerk = false;
+	instance_destroy(mover);
 	mover = noone;
 	//speed = 0; //stop movement speed of object
 	
