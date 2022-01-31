@@ -11,3 +11,4 @@ if(keyboard_check(vk_escape))
 	//do exit game operations	
 	
 }
+
