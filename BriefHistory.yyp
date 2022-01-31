@@ -9,6 +9,7 @@
     {"id":{"name":"WaveController","path":"objects/WaveController/WaveController.yy",},"order":8,},
     {"id":{"name":"personGasping","path":"objects/personGasping/personGasping.yy",},"order":7,},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},"order":2,},
+    {"id":{"name":"end_screen","path":"sprites/end_screen/end_screen.yy",},"order":7,},
     {"id":{"name":"game_start_spr","path":"sprites/game_start_spr/game_start_spr.yy",},"order":6,},
     {"id":{"name":"MouseController","path":"objects/MouseController/MouseController.yy",},"order":1,},
     {"id":{"name":"wave_obj","path":"objects/wave_obj/wave_obj.yy",},"order":9,},

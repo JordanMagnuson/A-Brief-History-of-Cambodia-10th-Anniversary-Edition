@@ -1,2 +1,3 @@
-draw = true;
+draw = false;
 gameOver = false;
+gameEnded = false;
