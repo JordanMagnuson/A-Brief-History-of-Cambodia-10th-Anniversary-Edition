@@ -69,7 +69,6 @@ function floatYcalc()
 
 function floatXcalc()
 {
-	scared = false;
 	//Select an x-value to "float" to
 	floatXDir = choose(-1, 1);
 	floatX = MIN_FLOAT_X + random(1) * (MAX_FLOAT_X - MIN_FLOAT_X);
