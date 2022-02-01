@@ -15,7 +15,7 @@ WATER_LINE = global.WATER_LINE + global.FLOAT_LEVEL_VARIATION;
 //sound effects go here
 
 
-
+Movement = noone
 preparingToJerk = false;
 jerking = false;
 jerkDuration = 0.08;
@@ -66,7 +66,10 @@ function jerkAway()
 	jerkY = sqrt(jerkRadius * jerkRadius - jerkX * jerkX) * -1;
 	//mover
 	//begin moving
-	move_towards_point(x + jerkX, y + jerkY,jerkDuration); //this might work as a translation of flash punk linear motion
+	//Movement = instance_create_depth(x,y,depth,mover)
+	//Movement.startmoving(x+jerkX,y+jerkY,jerkDuration)
+	//alarm[3] = room_speed * jerkDuration
+	draw_sprite_ext(sprite_index,image_index,x+jerkX,y+jerkY,image_xscale,image_yscale,0,c_white,1)
 	//needs more testing
 }
 
@@ -75,7 +78,7 @@ function jerkBack()
 	preparingToJerk = false;
 	jerking = true;	
 	move_towards_point(mouse_x,mouse_y,jerkDuration);
-	
+	Movement = noone;
 	//begin moving jerkaway
 }
 
@@ -85,6 +88,7 @@ function stopJerking()
 	alarm[1] = -1; //end alarm
 	jerking = false;			
 	preparingToJerk = false;
+	
 	//speed = 0; //stop movement speed of object
 	
 }

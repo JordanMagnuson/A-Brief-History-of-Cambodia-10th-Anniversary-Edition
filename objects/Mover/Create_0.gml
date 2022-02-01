@@ -1,15 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-Xdest = noone;
-ydest = noone;
+movingpath = noone;
 
 
-function beginMovement(distantx, distanty, duration)
+function startmoving(xplot, yplot, duration)
 {
-		Xdest = distantx;
-		ydest = distanty;
-		alarm[0] = room_speed * duration;
+	movingpath = path_add()
+	var Speed = distance_to_point(xplot,yplot) / room_speed * duration;
+	path_add_point(movingpath,x,y,100)
+	path_add_point(movingpath,xplot,yplot,100)
+	path_start(movingpath,room_speed,path_action_reverse,true)
+	
 	
 }

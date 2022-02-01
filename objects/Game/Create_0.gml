@@ -1,8 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-
 FadeTo(10,c_black)
 ResetGlobals()
 
@@ -14,7 +11,7 @@ instance_create_depth(x,y,depth,WaveController)
 alarm[0] = room_speed * 1;
 alarm[1] = room_speed * 2;
 alarm[2] = room_speed * 3;
-instance_create_depth(x,y,depth,FloatController);
+instance_create_depth(x,y,depth,floatcontroller);
 
 
 placePeople()
@@ -40,4 +37,3 @@ for (var xPos = 0; xPos <= xPosArray.length; xPos++)
 }			
 			
 }
-

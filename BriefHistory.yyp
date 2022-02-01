@@ -1,5 +1,7 @@
 {
   "resources": [
+    {"id":{"name":"floatcontroller","path":"objects/floatcontroller/floatcontroller.yy",},"order":13,},
+    {"id":{"name":"mover","path":"objects/mover/mover.yy",},"order":11,},
     {"id":{"name":"_heartbeat_32424","path":"sounds/_heartbeat_32424/_heartbeat_32424.yy",},"order":10,},
     {"id":{"name":"personGrabbed","path":"objects/personGrabbed/personGrabbed.yy",},"order":3,},
     {"id":{"name":"_water_plunge","path":"sounds/_water_plunge/_water_plunge.yy",},"order":0,},
@@ -7,6 +9,7 @@
     {"id":{"name":"personFloating","path":"objects/personFloating/personFloating.yy",},"order":4,},
     {"id":{"name":"_heartbeat_single","path":"sounds/_heartbeat_single/_heartbeat_single.yy",},"order":5,},
     {"id":{"name":"FadeTo","path":"scripts/FadeTo/FadeTo.yy",},"order":1,},
+    {"id":{"name":"Game","path":"objects/Game/Game.yy",},"order":12,},
     {"id":{"name":"personSwimming","path":"objects/personSwimming/personSwimming.yy",},"order":6,},
     {"id":{"name":"personFalling","path":"objects/personFalling/personFalling.yy",},"order":5,},
     {"id":{"name":"click_to_continue","path":"sprites/click_to_continue/click_to_continue.yy",},"order":5,},

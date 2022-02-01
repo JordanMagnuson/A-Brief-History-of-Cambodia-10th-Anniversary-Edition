@@ -1,26 +1,20 @@
 
 
-if(instance_exists(MouseController))
-{
-	window_set_cursor(cr_none);
-	x = mouse_x;
-	y = mouse_y;
-	//alarm[1] = room_speed * 1; //this is for 1 second, may need to be adjusted
-	jerkAway()
-}
+
 
 
 //update status
 
 if(jerking)
 {
-	x = x+jerkX;
-	y = y + jerkY;
+	
+	
 }
 else
 {
 	x = mouse_x;
 	y = mouse_y;
+	draw_self()
 }
 
 var overlapPerson = instance_place(x,y,person_obj);
@@ -103,7 +97,7 @@ if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrab
 	{
 		if (global.personGrabbed.Health < global.personGrabbed.maxHealth * 0.9)
 		{
-			show_debug_message("jerking away")
+			//show_debug_message("jerking away")
 			jerkAway();
 		}
 		else if (global.personGrabbed.Health > global.MIN_HEALTH)

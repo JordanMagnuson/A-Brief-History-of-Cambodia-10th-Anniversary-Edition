@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "FloatController",
+  "name": "floatcontroller",
   "tags": [],
   "resourceType": "GMObject",
 }
