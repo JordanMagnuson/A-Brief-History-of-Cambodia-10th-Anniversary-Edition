@@ -11,9 +11,9 @@ function newWave(alarm)
 	}
 	xPos = random(1) * (2 * xVar);
 	yPos = global.WATER_LINE - yVar + random(1) * (2 * yVar);
-	currentWave = instance_create_layer(xPos, yPos, layer, wave_obj);
+	currentWave = instance_create_depth(xPos, yPos,depth, wave_obj);
 	
-	alarm_set(alarm, wave_obj.fadeDuration);
+	alarm_set(alarm, currentWave.fadeDuration);
 }
 
 

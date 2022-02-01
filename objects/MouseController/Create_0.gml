@@ -29,6 +29,13 @@ jerkY = noone;
 
 //constructor will be taken care of in sprite settings
 
+function added()
+{
+		alarm[1] = room_speed * 1
+	
+}
+
+
 function jerkAway()
 {
 	preparingToJerk = false;
@@ -69,7 +76,7 @@ function jerkAway()
 	//Movement = instance_create_depth(x,y,depth,mover)
 	//Movement.startmoving(x+jerkX,y+jerkY,jerkDuration)
 	//alarm[3] = room_speed * jerkDuration
-	draw_sprite_ext(sprite_index,image_index,x+jerkX,y+jerkY,image_xscale,image_yscale,0,c_white,1)
+	//draw_sprite_ext(sprite_index,image_index,x+jerkX,y+jerkY,image_xscale,image_yscale,0,c_white,1)
 	//needs more testing
 }
 

@@ -14,7 +14,7 @@ alarm[2] = room_speed * 3;
 instance_create_depth(x,y,depth,floatcontroller);
 
 
-placePeople()
+
 
 
 
@@ -27,7 +27,7 @@ function placePeople()
 	array_push(xPosArray, random_range(0,1) * room_width);
 }	
 	array_sort(xPosArray,false)
-for (var xPos = 0; xPos <= xPosArray.length; xPos++)
+for (var xPos = 0; xPos < array_length(xPosArray); xPos++)
 { 
 	var yPos = global.WATER_LINE + random_range(0,1) * global.FLOAT_LEVEL_VARIATION;
 	phaseDelay = xPos / global.PHASE_DELAY_DIVIDER;
@@ -37,3 +37,6 @@ for (var xPos = 0; xPos <= xPosArray.length; xPos++)
 }			
 			
 }
+
+
+placePeople()
