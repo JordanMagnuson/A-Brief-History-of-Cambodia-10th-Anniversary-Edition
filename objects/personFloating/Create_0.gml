@@ -49,6 +49,19 @@ function unterrify()
 }
 
 
+function delayedTerrify(delay)
+{
+if (delay == 0)
+{
+	terrify();	
+}
+else
+{
+	alarm[5] = room_speed * delay
+}			
+}
+
+
 function floatYcalc()
 {	
 	//Select a y-value to "float" to
