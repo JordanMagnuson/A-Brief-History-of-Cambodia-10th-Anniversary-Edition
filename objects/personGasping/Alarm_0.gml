@@ -1,2 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Floating Alarm
+initY = y;
+upDown = -upDown;
+
+alarm_set(0, FLOAT_DURATION * room_speed);

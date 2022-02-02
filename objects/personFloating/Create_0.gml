@@ -77,7 +77,6 @@ function floatYcalc()
 		floatY = maxY - y;
 	}
 	initY = y;
-	show_debug_message(floatY);
 }
 
 function floatXcalc()
@@ -91,7 +90,6 @@ function floatXcalc()
 	{
 		floatXDir = -floatXDir;
 		floatX = -floatX;
-		show_debug_message(floatXDir);
 	}
 	
 	floatYcalc();

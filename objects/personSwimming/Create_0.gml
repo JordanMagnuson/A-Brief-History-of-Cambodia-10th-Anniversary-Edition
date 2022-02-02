@@ -15,7 +15,7 @@ image_alpha = global.UNDERWATER_ALPHA;
 //Function to change swimmer to floater upon reaching surface
 function changeToFloater()
 {
-	s = instance_create_depth(x, y, depth, personFloating);
+	s = instance_create_depth(x, y, depth, personGasping);
 	s.image_angle = image_angle;
 	instance_destroy(self);			
 }
