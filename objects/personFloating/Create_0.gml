@@ -35,11 +35,14 @@ minY = y - MAX_FLOAT_Y - 10;
 function terrify()
 {
 		show_debug_message("terrified");
+		image_xscale = 1;
+		image_yscale = 1;
 		terrified = true;
 		shaking = true;
 		shakeAmount = global.peopleKilled / global.NUMBER_OF_PEOPLE;
 		bScale = 0.3;
-		bDuration = 0.5;	
+		bDuration = 0.5;
+		alarm_set(2, bDuration * room_speed);
 }
 
 function unterrify()
