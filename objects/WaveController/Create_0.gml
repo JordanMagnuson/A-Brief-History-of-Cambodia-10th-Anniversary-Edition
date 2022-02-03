@@ -19,5 +19,3 @@ function newWave(alarm)
 
 
 newWave(0);
-newWave(1);
-newWave(2);
