@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+event_inherited()
+
 V_MAX = 0.5;
 MIN_BUBBLES = 2;
 MAX_BUBBLES = 4;
@@ -27,32 +29,32 @@ function playSound()
 function startDrowning()
 {
 	drowning = true;
-	Global.peopleKilled += 1;
-	alarm[0] = room_speed * 1.5;
+	global.peopleKilled += 1;
+	//alarm[0] = room_speed * 1.5;
 	alarm[1] = room_speed * 1.5
-	global.bloodOverlay.updateAlpha();	
+	//global.bloodOverlay.updateAlpha();	
 	
 	global.scareDistance = global.peopleKilled * 20;		
 	global.scareDistanceAfter = global.scareDistance * 4;
 	alarm[2] = room_speed * 2
 			
 	// Ambient sounds
-	if (global.peopleKilled == 1 && !global.ambientController.sndHell01.playing)
-	{
-		global.ambientController.playSpecificSound(global.ambientController.sndHell01);
-	}	
-	else if (global.peopleKilled == 2 && !global.ambientController.sndHell02.playing)
-	{
-		global.ambientController.playSpecificSound(global.ambientController.sndHell02);
-	}		
-	else if (global.peopleKilled == 3 && !global.ambientController.sndHell03.playing)
-		{
-			global.ambientController.playSpecificSound(global.ambientController.sndHell03);
-		}	
-		else if (global.peopleKilled >= 4 && !global.ambientController.started)
-		{
-			global.ambientController.start();
-		}					
+	//if (global.peopleKilled == 1 && !global.ambientController.sndHell01.playing)
+	//{
+	//	global.ambientController.playSpecificSound(global.ambientController.sndHell01);
+	//}	
+	//else if (global.peopleKilled == 2 && !global.ambientController.sndHell02.playing)
+	//{
+	//	global.ambientController.playSpecificSound(global.ambientController.sndHell02);
+	//}		
+	//else if (global.peopleKilled == 3 && !global.ambientController.sndHell03.playing)
+	//	{
+	//		global.ambientController.playSpecificSound(global.ambientController.sndHell03);
+	//	}	
+	//	else if (global.peopleKilled >= 4 && !global.ambientController.started)
+	//	{
+	//		global.ambientController.start();
+	//	}					
 }
 
 
@@ -86,6 +88,7 @@ function terrifyEveryone()
 	{
 		instance_create_depth(5,5,depth,GameController)
 	}
+	instance_destroy()
 			
 }
 
@@ -108,4 +111,4 @@ function releaseBubble()
 	}
 }
 		
-		
+startDrowning()

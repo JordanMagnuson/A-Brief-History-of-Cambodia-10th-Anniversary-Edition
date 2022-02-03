@@ -5,7 +5,10 @@ event_inherited()
 if (drowning)
 {
 	if (y > room_height + sprite_height)
-		destroy();
+	{	
+		show_debug_message("drowner deleted")
+		destroy()
+	}
 					
 	if (v < V_MAX)
 		v += a;
