@@ -6,7 +6,6 @@ fading = false;
 dead = false;
 angle = 0;
 maxHealth = 100;
-Health = 100;
 
 x = 0;
 y = 0;
@@ -31,6 +30,7 @@ function update()
 	
 	if( y > floatLevel + global.FLOAT_LEVEL_VARIATION)
 	{
+		show_debug_message(string(Health))
 		if(Health > global.MIN_HEALTH)
 		{
 			Health -= global.HEALTH_LOSS_RATE;	

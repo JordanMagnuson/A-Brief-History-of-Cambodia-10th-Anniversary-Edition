@@ -35,3 +35,14 @@ var t = (mt - alarm_get(2)) / mt;
 x = quadInOut(t, initX, xDist, 1);
 y = quadInOut(t, initY, yDist, -1);
 
+
+if (Health > global.MIN_HEALTH)
+{
+	Health -= global.HEALTH_LOSS_RATE * 2;
+}
+else
+{
+	instance_create_depth(x,y,depth,PersonDrowning)
+	//sndHeartbeat.stop();
+	instance_destroy()
+}

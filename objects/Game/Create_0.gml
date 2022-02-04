@@ -21,13 +21,13 @@ instance_create_depth(x,y,depth,floatcontroller);
 function placePeople()
 {
 	var phaseDelay = 0;
-	var xPosArray = array_create(global.NUMBER_OF_PEOPLE)
-	for (var i = 1; i <= global.NUMBER_OF_PEOPLE; i++)
+	var xPosArray = array_create(8)
+	for (var i = 1; i <= 8; i++)
 { 
 	array_push(xPosArray, random_range(0,1) * room_width);
 }	
 	array_sort(xPosArray,false)
-for (var xPos = 0; xPos < array_length(xPosArray); xPos++)
+for (var xPos = 0; xPos < 8; xPos++)
 { 
 	var yPos = global.WATER_LINE + random_range(0,1) * global.FLOAT_LEVEL_VARIATION;
 	phaseDelay = xPos / global.PHASE_DELAY_DIVIDER;

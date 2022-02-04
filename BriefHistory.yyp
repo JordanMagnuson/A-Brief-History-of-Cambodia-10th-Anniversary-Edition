@@ -13,6 +13,7 @@
     {"id":{"name":"personSwimming","path":"objects/personSwimming/personSwimming.yy",},"order":6,},
     {"id":{"name":"personFalling","path":"objects/personFalling/personFalling.yy",},"order":5,},
     {"id":{"name":"click_to_continue","path":"sprites/click_to_continue/click_to_continue.yy",},"order":5,},
+    {"id":{"name":"Bubbles","path":"sprites/Bubbles/Bubbles.yy",},"order":8,},
     {"id":{"name":"_robinhood76_01260_water_swimming_splashing_1_edited_fading","path":"sounds/_robinhood76_01260_water_swimming_splashing_1_edited_fading/_robinhood76_01260_water_swimming_splashing_1_edited_fading.yy",},"order":7,},
     {"id":{"name":"_pcaeldries_tide_23454","path":"sounds/_pcaeldries_tide_23454/_pcaeldries_tide_23454.yy",},"order":13,},
     {"id":{"name":"WaveController","path":"objects/WaveController/WaveController.yy",},"order":8,},
