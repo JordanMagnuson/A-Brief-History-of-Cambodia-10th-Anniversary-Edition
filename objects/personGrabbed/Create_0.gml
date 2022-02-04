@@ -30,7 +30,7 @@ function update()
 	
 	if( y > floatLevel + global.FLOAT_LEVEL_VARIATION)
 	{
-		show_debug_message(string(Health))
+		//show_debug_message(string(Health))
 		if(Health > global.MIN_HEALTH)
 		{
 			Health -= global.HEALTH_LOSS_RATE;	

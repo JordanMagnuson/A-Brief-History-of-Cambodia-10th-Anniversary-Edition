@@ -80,6 +80,8 @@ function changeToFloater()
 	floater.image_yscale = image_yscale;
 	floater.terrify();
 	floater.shakeAmount = shakeAmount;
+	floater.Health = Health;
+	floater.maxHealth = maxHealth
 	show_debug_message("personGasping to personFloating");
 	instance_destroy(self);
 }

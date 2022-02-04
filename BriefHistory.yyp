@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"floatcontroller","path":"objects/floatcontroller/floatcontroller.yy",},"order":13,},
+    {"id":{"name":"bubbles","path":"objects/bubbles/bubbles.yy",},"order":16,},
     {"id":{"name":"mover","path":"objects/mover/mover.yy",},"order":11,},
     {"id":{"name":"_heartbeat_32424","path":"sounds/_heartbeat_32424/_heartbeat_32424.yy",},"order":10,},
     {"id":{"name":"personGrabbed","path":"objects/personGrabbed/personGrabbed.yy",},"order":3,},

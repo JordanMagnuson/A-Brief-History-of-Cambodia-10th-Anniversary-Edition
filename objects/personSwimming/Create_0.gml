@@ -17,5 +17,7 @@ function changeToFloater()
 {
 	s = instance_create_depth(x, y, depth, personGasping);
 	s.image_angle = image_angle;
+	s.Health = Health
+	s.maxHealth = maxHealth
 	instance_destroy(self);			
 }

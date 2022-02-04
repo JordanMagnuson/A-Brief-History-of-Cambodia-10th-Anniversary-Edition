@@ -38,6 +38,7 @@ function added()
 
 function jerkAway()
 {
+	show_debug_message("jerk function")
 	preparingToJerk = false;
 	jerking = true;
 	
@@ -54,6 +55,7 @@ function jerkAway()
 	
 	if(random_range(0,1) * jerkRadius > 2.5)
 	{
+		show_debug_message("bubbles")
 		releaseBubble()
 	}
 	
@@ -104,6 +106,8 @@ function releaseBubble()
 {
 	var xLoc = x + random_range(0,1) * sprite_width * choose(1,-1);
 	var yLoc = y - sprite_height - random_range(0,1) * sprite_height;
-	//add new bubble (object not yet created
+	instance_create_depth(xLoc,yLoc,depth,bubbles)
 	
 }
+
+jerkAway()

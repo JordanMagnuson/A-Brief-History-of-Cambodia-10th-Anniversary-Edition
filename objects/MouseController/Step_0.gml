@@ -45,7 +45,10 @@ else if( mouse_check_button_released(mb_left))
 	
 	if(jerking)
 	{
+		show_debug_message("stopped")
 		stopJerking();	
+		show_debug_message(string(preparingToJerk))
+		show_debug_message(string(jerking))
 	}
 	if(speed > 0)
 	{
@@ -97,26 +100,29 @@ else
 
 if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION))
 {
-	//show_debug_message("jerking away if statement")
+	
 	//show_debug_message(string(preparingToJerk))
 	//show_debug_message(string(jerking))
+	
 	if(!jerking && !preparingToJerk)
 	{
+		
 		if (global.personGrabbed.Health < global.personGrabbed.maxHealth * 0.9)
 		{
-			//show_debug_message("jerking away")
+			show_debug_message("jerking away")
 			jerkAway();
 		}
 		else if (global.personGrabbed.Health > global.MIN_HEALTH)
 		{
 			preparingToJerk = true;
-			//alarm[1] = room_speed * 2;
-			jerkAway()
+			alarm[1] = room_speed * 2;
+			//jerkAway()
 		}
 	}
 }
 else if(jerking)
 {
+	show_debug_message("stopped")
 	stopJerking();	
 }
 
