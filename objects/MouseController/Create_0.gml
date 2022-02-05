@@ -41,6 +41,7 @@ function jerkAway()
 	show_debug_message("jerk function")
 	preparingToJerk = false;
 	jerking = true;
+	releaseBubble()
 	
 	if(!global.personGrabbed)
 	{
