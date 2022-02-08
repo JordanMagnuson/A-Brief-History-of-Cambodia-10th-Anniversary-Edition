@@ -68,7 +68,7 @@ if (scared)
 	floatX = 0;
 	floatY = 0;
 }
-else
+else if(floatDelay < 0)
 {
 	var ty = ((FLOAT_DURATION*room_speed) - alarm_get(3)) / (FLOAT_DURATION * room_speed);
 	var tx = ((FLOAT_DURATION*room_speed*2) - alarm_get(4)) / (FLOAT_DURATION * room_speed*2);
@@ -79,4 +79,13 @@ else
 	
 	var ta = ((angleDur * room_speed) - (alarm_get(6) + alarm_get(7) + 1)) / (angleDur * room_speed);
 	image_angle = quadInOut(ta, startAngle, angleChange, angleDir);
+}
+else
+{
+	//float Delay On Spawn
+	floatDelay -= 1;
+	if(floatDelay < 0)
+	{
+		floatXcalc();
+	}
 }

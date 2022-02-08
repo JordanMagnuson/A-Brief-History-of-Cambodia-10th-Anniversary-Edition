@@ -25,6 +25,7 @@ MAX_FLOAT_X = 40;
 MIN_FLOAT_Y = 10;
 MAX_FLOAT_Y = 60;
 FLOAT_DURATION = 3;
+floatDelay = 0;
 floatYDir = 1;
 floatXDir = 0;
 floatX = 0;
@@ -136,5 +137,4 @@ function bScaleChange()
 		shakeAmount = 0;
 }
 
-floatXcalc();
 

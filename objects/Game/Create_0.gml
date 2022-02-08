@@ -32,7 +32,8 @@ for (var xPos = 0; xPos < 8; xPos++)
 	var yPos = global.WATER_LINE + random_range(0,1) * global.FLOAT_LEVEL_VARIATION;
 	phaseDelay = xPos / global.PHASE_DELAY_DIVIDER;
 	
-	instance_create_depth(xPosArray[xPos],yPos,depth,personFloating)
+	var p = instance_create_depth(xPosArray[xPos],yPos,depth,personFloating);
+	p.floatDelay = (phaseDelay * room_speed)*room_speed;
 				
 }			
 			
