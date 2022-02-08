@@ -9,7 +9,6 @@ MIN_FLOAT_X  = 0;
 MAX_FLOAT_X  = 0;	// 20	
 MIN_FLOAT_Y  = GASP_FLOAT_DISTANCE;		
 MAX_FLOAT_Y  = GASP_FLOAT_DISTANCE;
-HANG_TIME  = 0; 	// Time at top of wave, before floating back down
 FLOAT_DURATION  = 1;	// Used INSTEAD of FLOAT_SPEED, depending on which you want to be constant
 
 alarm_set(0, FLOAT_DURATION * room_speed);
@@ -18,12 +17,14 @@ MIN_ANGLE_CHANGE  = 0;
 MAX_ANGLE_CHANGE  = 0;
 
 
-breathDuration = 0.5;
-breathScale = 0.3;
+bDuration = 0.5;
+bScale = 0.3;
+bDir = 1;
+alarm_set(2, bDuration * room_speed);
+
 shakeAmount = global.shakeAmount;
 
-var firstGasp = true;
-var healthyAgain = false;
+healthyAgain = false;
 
 //sound
 
@@ -74,8 +75,8 @@ function getFloaterDelay()
 function changeToFloater()
 {
 	floater = instance_create_depth(x, y, depth, personFloating);
-	//floater.breathDuration = breathDuration;
-	//floater.breathScale = breathScale;
+	floater.bDuration = bDuration;
+	floater.bScale = bScale;
 	floater.image_xscale = image_xscale;
 	floater.image_yscale = image_yscale;
 	floater.terrify();

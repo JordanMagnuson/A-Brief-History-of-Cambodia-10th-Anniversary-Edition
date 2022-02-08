@@ -2,8 +2,13 @@
 event_inherited();
 
 //Breathing-related vars
+HEALTHY_BREATH_SCALE = .1;
+HEALTHY_BREATH_DURATION = 3;
+BREATH_SCALE_CHANGE = .01;
+BREATH_DURATION_CHANGE = .1;
+resetBreath = false;
 bScale = .15;	//inhale/exhale scale limits
-bDuration = .5;	//time in seconds for breath to take
+bDuration = 3;	//time in seconds for breath to take
 bDir = 1;		// breathe in or out
 alarm_set(2, bDuration * room_speed);
 
@@ -49,6 +54,7 @@ function unterrify()
 {
 	shaking = false;
 	terrified = false;
+	resetBreath = true;
 }
 
 
@@ -100,6 +106,25 @@ function floatXcalc()
 	initY = y;
 	alarm_set(3, FLOAT_DURATION * room_speed);
 	alarm_set(4, FLOAT_DURATION * room_speed * 2);
+}
+
+function bScaleChange()
+{
+	if (bScale > HEALTHY_BREATH_SCALE)
+		bScale -= BREATH_SCALE_CHANGE;
+	else	
+		bScale = HEALTHY_BREATH_SCALE;
+		
+	if (bDuration < HEALTHY_BREATH_DURATION)
+		bDuration += BREATH_DURATION_CHANGE;	
+	else
+		bDuration = HEALTHY_BREATH_DURATION;
+				
+	// Reset shaking as well
+	if (shakeAmount > 0)
+		shakeAmount -= 0.05;
+	else
+		shakeAmount = 0;
 }
 
 floatXcalc();

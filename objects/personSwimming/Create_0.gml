@@ -4,6 +4,7 @@ event_inherited();
 
 mt = -1;
 
+
 SWIM_SPEED = 70;
 
 hitSurface = false;

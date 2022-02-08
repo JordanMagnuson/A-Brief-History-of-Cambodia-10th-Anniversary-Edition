@@ -1,6 +1,8 @@
+image_angle = 90; //needs to be set for future angle changes
+
 floatLevel = global.WATER_LINE + random_range(0,1) * global.FLOAT_LEVEL_VARIATION;
 
-breathDirection = 1;
+bDir = 1;
 Health = 100;
 maxHealth = 100;
 scale = 1; //this value may not be needeed
@@ -19,7 +21,7 @@ timeToMove = -1;//	the amound of frames it will take to move
 
 function scare()
 {
-	show_debug_message(string(id) + ": scared");
+	show_debug_message("scared");
 	//Make person scared
 	scared = true;
 	

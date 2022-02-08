@@ -12,7 +12,14 @@ image_yscale = scale;
 if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController) < global.scareDistance or keyboard_check_pressed(vk_space))
 {
 	deadSoFar = global.peopleKilled;
-	//Terrify Person, set unterrify alarm
+	if(!terrified)
+		terrify();
+	if(!scared)
+		scare();
+}
+else if(terrified and alarm_get(1) < 0)
+{
+	//Set unterrify alarm
 	switch(global.peopleKilled)
 	{
 		case 0:
@@ -34,20 +41,13 @@ if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController
 		default:
 			break;
 	}
-	terrify();
-	scare();
 }
 
-//Breathing when terrified TODO: implement breath scale changes
+//Breathing when terrified
 if(terrified)
 {
-	bScale = .25;
+	bScale = .3;
 	bDuration = .5;
-}
-else
-{
-	bScale = .1;
-	bDuration = 3;
 }
 
 if(shaking)
