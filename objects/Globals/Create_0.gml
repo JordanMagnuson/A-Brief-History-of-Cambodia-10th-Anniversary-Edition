@@ -44,6 +44,6 @@ global.returningToMenu = false;
 global.MouseController = MouseController;
 //global.floatController = FloatController;
 global.personGrabbed = noone;
-//global.bloodOverlay = BloodOverlay;
+//global.bloodOverlay = bloodOverlay;
 //global.ambientController = AmbientController;
 //global.gameEndController = GameEndController;

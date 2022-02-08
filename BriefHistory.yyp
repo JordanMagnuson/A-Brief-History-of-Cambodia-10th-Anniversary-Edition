@@ -6,6 +6,7 @@
     {"id":{"name":"_heartbeat_32424","path":"sounds/_heartbeat_32424/_heartbeat_32424.yy",},"order":10,},
     {"id":{"name":"personGrabbed","path":"objects/personGrabbed/personGrabbed.yy",},"order":3,},
     {"id":{"name":"_water_plunge","path":"sounds/_water_plunge/_water_plunge.yy",},"order":0,},
+    {"id":{"name":"bloodOverlay","path":"objects/bloodOverlay/bloodOverlay.yy",},"order":18,},
     {"id":{"name":"hand_closed","path":"sprites/hand_closed/hand_closed.yy",},"order":3,},
     {"id":{"name":"personFloating","path":"objects/personFloating/personFloating.yy",},"order":4,},
     {"id":{"name":"_heartbeat_single","path":"sounds/_heartbeat_single/_heartbeat_single.yy",},"order":5,},
@@ -59,7 +60,6 @@
   ],
   "isDnDProject": false,
   "isEcma": false,
-  "tutorialPath": "",
   "configs": {
     "name": "Default",
     "children": [],
@@ -91,7 +91,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2022.1.1.610",
   },
   "resourceVersion": "1.4",
   "name": "BriefHistory",

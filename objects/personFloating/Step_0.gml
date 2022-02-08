@@ -9,7 +9,7 @@ image_xscale = scale;
 image_yscale = scale;
 
 //New Person Has been killed
-if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController) < global.scareDistance or keyboard_check_pressed(vk_space))
+if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController) < global.scareDistance)
 {
 	deadSoFar = global.peopleKilled;
 	if(!terrified)

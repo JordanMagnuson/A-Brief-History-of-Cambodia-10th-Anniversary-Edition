@@ -12,7 +12,7 @@ if(alarm_get(2) <= 0)
 	//if you hit the surface on the last movement, stop
 	if(hitSurface)
 	{
-		changeToFloater();
+		changeToGasper();
 	}
 	initY = y;
 	initX = x;
