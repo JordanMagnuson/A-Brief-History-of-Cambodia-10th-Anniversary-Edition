@@ -3,14 +3,14 @@
 
 movingpath = noone;
 
+xdestination = noone;
+ydestination = noone;
 
 function startmoving(xplot, yplot, duration)
 {
-	movingpath = path_add()
-	var Speed = distance_to_point(xplot,yplot) / room_speed * duration;
-	path_add_point(movingpath,x,y,100)
-	path_add_point(movingpath,xplot,yplot,100)
-	path_start(movingpath,room_speed,path_action_reverse,true)
-	
-	
+	var temp = distance_to_point(xplot,yplot) / duration * room_speed
+	xdestination = xplot
+	ydestination = yplot
+	move_towards_point(xplot,yplot,temp)
+	alarm[0] = duration * room_speed
 }

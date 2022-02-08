@@ -78,7 +78,9 @@ function jerkAway()
 	//begin moving
 	//Movement = instance_create_depth(x,y,depth,mover)
 	//Movement.startmoving(x+jerkX,y+jerkY,jerkDuration)
-	//alarm[3] = room_speed * jerkDuration
+	//alarm[3] = jerkDuration * room_speed
+	move_towards_point(x+jerkX,y+jerkY,jerkDuration * room_speed)
+	alarm[3] = room_speed * jerkDuration
 	//draw_sprite_ext(sprite_index,image_index,x+jerkX,y+jerkY,image_xscale,image_yscale,0,c_white,1)
 	//needs more testing
 }
@@ -87,15 +89,19 @@ function jerkBack()
 {
 	preparingToJerk = false;
 	jerking = true;	
-	move_towards_point(mouse_x,mouse_y,jerkDuration);
-	Movement = noone;
+	move_towards_point(mouse_x,mouse_y,jerkDuration * room_speed)
+	alarm[4] = room_speed * jerkDuration
 	//begin moving jerkaway
 }
 
 function stopJerking()
 {
 	//cancel moving	
+	alarm[3] = -1
+	alarm[4] = -1
 	alarm[1] = -1; //end alarm
+	instance_destroy(Movement)
+	Movement = noone;
 	jerking = false;			
 	preparingToJerk = false;
 	

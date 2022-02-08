@@ -5,20 +5,21 @@ var overlapPerson = noone;
 
 //update status
 window_set_cursor(cr_none);
-
+x = mouse_x;
+	y = mouse_y;
 
 if(jerking)
 {
-	x = mouse_x;
-	y = mouse_y;
-	draw_self()
+	//x = Movement.x
+	//y = Movement.y
+	//draw_self()
 	
 }
 else
 {
 	x = mouse_x;
 	y = mouse_y;
-	draw_self()
+	
 }
 
 if(mouse_check_button_pressed(mb_left))
