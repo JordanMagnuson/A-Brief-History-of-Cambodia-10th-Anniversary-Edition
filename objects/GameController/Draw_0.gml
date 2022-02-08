@@ -18,8 +18,7 @@ else if(gameOver)
 	 }
 	 else
 	 {
-		 //if the alpha = 1, draw the game over screen
-		draw_sprite(end_screen, 0, -100, 0);
+		 room_goto_next();
 	 }
 	 //reset draw alpha EACH STEP
 	 draw_set_alpha(1);
