@@ -31,9 +31,18 @@ floatX = 0;
 floatY = 0;
 initX = 0;
 initY = 0;
-angleChange = 0;
 maxY = y + 10;
 minY = y - MAX_FLOAT_Y - 10;
+
+
+
+//Initialize Angle Changes
+startAngle = image_angle;
+angleChange = MIN_ANGLE_CHANGE + random(1) * (MAX_ANGLE_CHANGE - MIN_ANGLE_CHANGE);
+angleDur = FLOAT_DURATION + floatX / 50;
+angleDir = 1;
+show_debug_message(angleDur)
+alarm_set(6, angleDur * room_speed);
 
 
 

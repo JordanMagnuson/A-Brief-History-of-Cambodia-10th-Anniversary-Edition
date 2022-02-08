@@ -55,7 +55,6 @@ if(shaking)
 	x += choose(shakeAmount, -shakeAmount);
 	y += choose(shakeAmount, -shakeAmount);
 }
-
 //Do movement if scared
 if (scared)
 {
@@ -75,4 +74,9 @@ else
 	var tx = ((FLOAT_DURATION*room_speed*2) - alarm_get(4)) / (FLOAT_DURATION * room_speed*2);
 	x = quadInOut(tx, initX, floatX, 1);
 	y = quadInOut(ty, initY, floatY, 1);
+	
+
+	
+	var ta = ((angleDur * room_speed) - (alarm_get(6) + alarm_get(7) + 1)) / (angleDur * room_speed);
+	image_angle = quadInOut(ta, startAngle, angleChange, angleDir);
 }
