@@ -8,7 +8,11 @@ mt = -1;
 SWIM_SPEED = 70;
 
 hitSurface = false;
+scared = false;
+timeToMove = -1;
+initialX = -1;
 canBeScared = false;
+
 alarm_set(1, room_speed);	//Delay before Person can be scared
 image_alpha = global.UNDERWATER_ALPHA;
 

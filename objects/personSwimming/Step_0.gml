@@ -29,13 +29,21 @@ if(alarm_get(2) <= 0)
 	alarm_set(2, mt);
 }
 
-//how much time has passed, as a proportion of total time alloted
-var t = (mt - alarm_get(2)) / mt;
+//scare
+if(distance_to_object(global.MouseController) < global.scareDistance)
+{
+	if(!scared and canBeScared)
+		scare();
+}
 
-x = quadInOut(t, initX, xDist, 1);
-y = quadInOut(t, initY, yDist, -1);
+if (scared)
+{
+	//how much time has passed, as a proportion of total time alloted
+	var t = (timeToMove - alarm_get(0)) / timeToMove;
+	x = quadInOut(t, initialX, xChange, 1);
+}
 
-
+//health loss
 if (Health > global.MIN_HEALTH)
 {
 	Health -= global.HEALTH_LOSS_RATE * 2;
@@ -46,3 +54,12 @@ else
 	//sndHeartbeat.stop();
 	instance_destroy()
 }
+
+//how much time has passed, as a proportion of total time alloted
+var t = (mt - alarm_get(2)) / mt;
+
+if(!scared)
+	x = quadInOut(t, initX, xDist, 1);
+else
+	initX = x;
+y = quadInOut(t, initY, yDist, -1);
