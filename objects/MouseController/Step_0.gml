@@ -26,9 +26,7 @@ if(mouse_check_button_pressed(mb_left))
 {
 	overlapPerson = instance_place(x,y, person_obj);
 
-
-
-	if(overlapPerson != noone )
+	if(overlapPerson != noone  and overlapPerson.object_index != PersonDrowning)
 	{
 		sprite_index = hand_closed;
 		//play audio
