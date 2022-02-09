@@ -8,8 +8,8 @@ var scale = quadInOut(t, 1 - (bDir * bScale), 2*bScale, bDir);
 image_xscale = scale;
 image_yscale = scale;
 
-//New Person Has been killed
-if(deadSoFar < global.peopleKilled and distance_to_object(global.MouseController) < global.scareDistance)
+//New Person Has been killed or terrified, can be scared by hand
+if((deadSoFar < global.peopleKilled or terrified) and distance_to_object(global.MouseController) < global.scareDistance)
 {
 	deadSoFar = global.peopleKilled;
 	if(!terrified)
