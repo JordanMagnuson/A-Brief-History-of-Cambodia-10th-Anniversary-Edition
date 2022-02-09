@@ -24,7 +24,7 @@ else
 
 if(mouse_check_button_pressed(mb_left))
 {
-	overlapPerson = instance_place(x,y,personFloating);
+	overlapPerson = instance_place(x,y, person_obj);
 
 
 
