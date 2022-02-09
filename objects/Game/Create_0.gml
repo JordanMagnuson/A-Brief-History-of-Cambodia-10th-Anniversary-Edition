@@ -41,3 +41,6 @@ for (var xPos = 0; xPos < 8; xPos++)
 
 
 placePeople()
+
+global.ambientController = instance_create_depth(x,y,depth,AmbientController)
+global.bloodOverlay = instance_create_depth(x,y,depth,bloodOverlay)

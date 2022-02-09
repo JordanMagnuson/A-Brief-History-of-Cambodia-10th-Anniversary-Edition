@@ -32,7 +32,7 @@ function startDrowning()
 	global.peopleKilled += 1;
 	//alarm[0] = room_speed * 1.5;
 	alarm[1] = room_speed * 1.5
-	//global.bloodOverlay.updateAlpha();	
+	global.bloodOverlay.updateAlpha();	
 	
 	global.scareDistance = global.peopleKilled * 20;		
 	global.scareDistanceAfter = global.scareDistance * 4;
