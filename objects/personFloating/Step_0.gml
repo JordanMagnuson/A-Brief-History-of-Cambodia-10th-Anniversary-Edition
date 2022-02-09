@@ -50,11 +50,17 @@ if(terrified)
 	bDuration = .5;
 }
 
+if(!scared and global.peopleKilled >= global.DEAD_BEFORE_ALWAYS_SACRED)
+{
+	scare();
+}
+
 if(shaking)
 {
 	x += choose(shakeAmount, -shakeAmount);
 	y += choose(shakeAmount, -shakeAmount);
 }
+
 //Do movement if scared
 if (scared)
 {
