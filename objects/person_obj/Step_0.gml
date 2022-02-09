@@ -20,4 +20,6 @@ if(global.peopleKilled >= global.NUMBER_OF_PEOPLE - 1 && distance_to_object(glob
 	drown.maxHealth = maxHealth;
 	drown.scale = scale;
 	instance_destroy();
+	
+	GameController.gameOver = true;
 }
