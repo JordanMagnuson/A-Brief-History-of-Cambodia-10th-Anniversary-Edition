@@ -11,7 +11,7 @@ MIN_FLOAT_Y  = GASP_FLOAT_DISTANCE;
 MAX_FLOAT_Y  = GASP_FLOAT_DISTANCE;
 FLOAT_DURATION  = 1;	// Used INSTEAD of FLOAT_SPEED, depending on which you want to be constant
 
-alarm_set(0, FLOAT_DURATION * room_speed);
+alarm_set(3, FLOAT_DURATION * room_speed);
 		
 MIN_ANGLE_CHANGE  = 0;
 MAX_ANGLE_CHANGE  = 0;

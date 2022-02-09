@@ -1,5 +1,6 @@
-/// @description Floating Alarm
-initY = y;
-upDown = -upDown;
+/// @description "Scared" alarm
+scared = false;
+timeToMove = -1;
+initialX = -1;
 
-alarm_set(0, FLOAT_DURATION * room_speed);
+show_debug_message("unscared");
