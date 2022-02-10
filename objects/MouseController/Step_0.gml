@@ -71,7 +71,7 @@ else if( mouse_check_button_released(mb_left))
 			swimmer.maxHealth = global.personGrabbed.maxHealth;
 		}
 		show_debug_message("object grabbed destroyed")
-		instance_destroy(global.personGrabbed);
+		global.personGrabbed.removed()
 		global.personGrabbed = noone;
 	}
 }
