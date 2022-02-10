@@ -63,3 +63,5 @@ if(!scared)
 else
 	initX = x;
 y = quadInOut(t, initY, yDist, -1);
+
+

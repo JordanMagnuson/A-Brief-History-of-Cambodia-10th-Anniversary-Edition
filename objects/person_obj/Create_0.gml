@@ -1,5 +1,9 @@
 image_angle = 90; //needs to be set for future angle changes
 
+var temp = depth;
+depth = 1;
+depth = round(temp);
+
 floatLevel = global.WATER_LINE + random_range(0,1) * global.FLOAT_LEVEL_VARIATION;
 
 bDir = 1;

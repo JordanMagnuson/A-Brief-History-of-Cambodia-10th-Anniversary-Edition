@@ -3,7 +3,7 @@
 FadeTo(10,c_black)
 ResetGlobals()
 gameending = false;
-var temp = instance_create_depth(mouse_x,mouse_y,depth,MouseController)	
+var temp = instance_create_depth(mouse_x,mouse_y,-1,MouseController)	
 temp.added()
 
 
