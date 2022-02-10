@@ -24,5 +24,14 @@ function changeToGasper()
 	s.image_angle = image_angle;
 	s.Health = Health
 	s.maxHealth = maxHealth
+if(audio_is_playing(_heartbeat_32424))
+{
+	audio_stop_sound(_heartbeat_32424)	
+}
 	instance_destroy(self);			
+}
+
+if(!audio_is_playing(_heartbeat_32424))
+{
+	audio_play_sound(_heartbeat_32424,2,true)	
 }

@@ -21,8 +21,8 @@ else
 	if (!hitWater)
 	{
 		hitWater = true;
-		//sndSplashUp.play();
-		//sndSplashDown.play();
+		audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading,2,false)
+		audio_play_sound(_splash_down_,2,false);
 		image_alpha = global.UNDERWATER_ALPHA;
 	}
 		v -= aWater;

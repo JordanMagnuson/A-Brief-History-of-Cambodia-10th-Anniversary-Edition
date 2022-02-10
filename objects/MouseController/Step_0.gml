@@ -29,10 +29,9 @@ if(mouse_check_button_pressed(mb_left))
 	if(overlapPerson != noone  and overlapPerson.object_index != PersonDrowning)
 	{
 		sprite_index = hand_closed;
-		//play audio
+		audio_play_sound(_jobro_dramatic_piano_2,2,false)
 		global.personGrabbed = instance_create_depth(overlapPerson.x,overlapPerson.y,1,personGrabbed);
-		//show_debug_message("object grabbed destroyed")
-		//show_debug_message(string(global.personGrabbed.y) + "compared to: " + string(global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION))
+		
 		global.personGrabbed.y = y;
 		global.personGrabbed.x = x;
 		global.personGrabbed.Health = overlapPerson.Health;
@@ -80,10 +79,12 @@ else if( mouse_check_button_released(mb_left))
 //sprite change
 if(global.personGrabbed != noone)
 {
-	//sprite_index = 1; // closed hand sprite
+	sprite_index = hand_closed
 	if (y > global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION && lastY < global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION)
 	{
-		//audio play for plunge sound	
+			audio_play_sound(_water_plunge,2,false)
+			audio_play_sound(_splash_down_,2,false)
+			audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading,2,false)
 	}
 }
 else if(overlapPerson != noone)

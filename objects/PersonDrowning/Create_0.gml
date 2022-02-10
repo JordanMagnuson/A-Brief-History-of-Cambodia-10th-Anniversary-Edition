@@ -21,7 +21,7 @@ image_alpha = global.UNDERWATER_ALPHA
 
 function playSound()
 {
-	playSound(_gabemiller74_breathofdeath)
+	audio_play_sound(_gabemiller74_breathofdeath,2,false)
 }
 
 
@@ -30,7 +30,7 @@ function startDrowning()
 {
 	drowning = true;
 	global.peopleKilled += 1;
-	//alarm[0] = room_speed * 1.5;
+	alarm[0] = room_speed * 1.5;
 	alarm[1] = room_speed * 1.5
 	global.bloodOverlay.updateAlpha();	
 	
@@ -39,22 +39,22 @@ function startDrowning()
 	alarm[2] = room_speed * 2
 			
 	// Ambient sounds
-	//if (global.peopleKilled == 1 && !global.ambientController.sndHell01.playing)
-	//{
-	//	global.ambientController.playSpecificSound(global.ambientController.sndHell01);
-	//}	
-	//else if (global.peopleKilled == 2 && !global.ambientController.sndHell02.playing)
-	//{
-	//	global.ambientController.playSpecificSound(global.ambientController.sndHell02);
-	//}		
-	//else if (global.peopleKilled == 3 && !global.ambientController.sndHell03.playing)
-	//	{
-	//		global.ambientController.playSpecificSound(global.ambientController.sndHell03);
-	//	}	
-	//	else if (global.peopleKilled >= 4 && !global.ambientController.started)
-	//	{
-	//		global.ambientController.start();
-	//	}					
+	if (global.peopleKilled == 1 && !audio_is_playing(_hell_01))
+	{
+		global.ambientController.playSpecificSound(_hell_01);
+	}	
+	else if (global.peopleKilled == 2 && !!audio_is_playing(_hell_02))
+	{
+		global.ambientController.playSpecificSound(_hell_02);
+	}		
+	else if (global.peopleKilled == 3 && !audio_is_playing(_hell_03_))
+		{
+			global.ambientController.playSpecificSound(_hell_03_);
+		}	
+		else if (global.peopleKilled >= 4 && !global.ambientController.started)
+		{
+			global.ambientController.start();
+		}					
 }
 
 
@@ -95,7 +95,9 @@ function terrifyEveryone()
 
 function playDrowningSound()
 {
-			//audio	
+			audio_play_sound(_drowning,2,false);
+			audio_sound_gain(_drowning,0,6);
+		
 }
 
 
@@ -105,10 +107,11 @@ function releaseBubble()
 	{
 		var xLoc = x + random_range(0,1) * sprite_width / 2 * choose(1, -1);
 		var yLoc = y - sprite_height - random_range(0,1) * sprite_height;
-		instance_create_depth(xLoc,yLoc,depth,Bubble)	
+		instance_create_depth(xLoc,yLoc,depth,bubbles)	
 		alarm[0] = room_speed * 2
 		bubblesReleased += 1;
 	}
 }
 		
-startDrowning()
+alarm[3] = room_speed * .5
+alarm[4] = room_speed * 1;

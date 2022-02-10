@@ -33,10 +33,7 @@ alarm[0] = room_speed;
 Health = 100;
 maxHealth = 100;
 
-function playGaspingSound()
-{
-	//audio for gasping	
-}
+
 
 function getFloaterDelay()
 {
@@ -89,3 +86,6 @@ function changeToFloater()
 
 
 alarm_set(1, getFloaterDelay() * room_speed);
+
+audio_play_sound(_heartbeat_32424,2,false)
+audio_sound_gain(_heartbeat_32424,0,2 * room_speed)

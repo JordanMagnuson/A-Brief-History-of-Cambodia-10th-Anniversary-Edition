@@ -20,7 +20,7 @@ lastSound = noone;
 function fadeOut( duration = 10)
 {
 	
-	audio_sound_gain(currentSound,0,duration)				
+	audio_sound_gain(currentSound,0,duration * room_speed)				
 }
 		
 function playSpecificSound(sound)
@@ -32,7 +32,7 @@ function playSpecificSound(sound)
 	fadeOutPosition = audio_sound_length(currentSound) - FADE_IN_DURATION;
 	audio_play_sound(currentSound,10,false)
 	audio_sound_gain(currentSound,0,0)
-	audio_sound_gain(currentSound,1,FADE_IN_DURATION)
+	audio_sound_gain(currentSound,1,FADE_IN_DURATION  * room_speed)
 			
 			// Set fade out
 	var fadeTime = audio_sound_length(currentSound) - FADE_IN_DURATION;
@@ -44,7 +44,7 @@ function fadeSpecificSound()
 			
 	lastSound = currentSound;
 	startedFade = true;
-	audio_sound_gain(currentSound,0,FADE_IN_DURATION)	
+	audio_sound_gain(currentSound,0,FADE_IN_DURATION  * room_speed)	
 }
 
 
@@ -64,7 +64,7 @@ startedFade = false;
 	fadeOutPosition = audio_sound_length(currentSound) - FADE_IN_DURATION;
 	audio_play_sound(currentSound,10,false)
 	audio_sound_gain(currentSound,0,0)
-	audio_sound_gain(currentSound,1,FADE_IN_DURATION)
+	audio_sound_gain(currentSound,1,FADE_IN_DURATION  * room_speed)
 }
 
 
@@ -74,6 +74,6 @@ function fadeSound()
 	
 	lastSound = currentSound;
 	startedFade = true;
-	audio_sound_gain(currentSound,0,FADE_IN_DURATION)
+	audio_sound_gain(currentSound,0,FADE_IN_DURATION  * room_speed)
 	alarm[1] = room_speed * FADE_IN_DURATION;
 }
