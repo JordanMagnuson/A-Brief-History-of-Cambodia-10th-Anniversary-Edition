@@ -76,13 +76,10 @@ function jerkAway()
 	jerkY = sqrt(jerkRadius * jerkRadius - jerkX * jerkX) * -1;
 	//mover
 	//begin moving
-	//Movement = instance_create_depth(x,y,depth,mover)
-	//Movement.startmoving(x+jerkX,y+jerkY,jerkDuration)
-	//alarm[3] = jerkDuration * room_speed
+	
 	move_towards_point(x+jerkX,y+jerkY,jerkDuration * room_speed)
 	alarm[3] = room_speed * jerkDuration
-	//draw_sprite_ext(sprite_index,image_index,x+jerkX,y+jerkY,image_xscale,image_yscale,0,c_white,1)
-	//needs more testing
+	
 }
 
 function jerkBack()

@@ -2,4 +2,4 @@
 // You can write your code in this editor
 
 
-y = y - image_speed
+y = y - ImageSpeed
