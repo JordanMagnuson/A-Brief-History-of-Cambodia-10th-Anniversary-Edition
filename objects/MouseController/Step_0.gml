@@ -43,10 +43,9 @@ else if( mouse_check_button_released(mb_left))
 	
 	if(jerking)
 	{
-		show_debug_message("stopped")
+		
 		stopJerking();	
-		show_debug_message(string(preparingToJerk))
-		show_debug_message(string(jerking))
+		
 	}
 	if(speed > 0)
 	{
