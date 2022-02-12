@@ -38,7 +38,7 @@ function update()
 		
 		if(Health > 52)
 		{
-			if(audio_is_playing(_heartbeat_32424) || audio_sound_get_gain(_heartbeat_32424) == 0)
+			if(!audio_is_playing(_heartbeat_32424) || audio_sound_get_gain(_heartbeat_32424) == 0)
 			{
 				var vol = clamp(Health,global.MIN_HEALTH,global.BASE_HEALTH)
 				audio_play_sound(_heartbeat_32424,2,true)

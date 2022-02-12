@@ -29,7 +29,9 @@ if(mouse_check_button_pressed(mb_left))
 	if(overlapPerson != noone  and overlapPerson.object_index != PersonDrowning)
 	{
 		sprite_index = hand_closed;
+		
 		audio_play_sound(_jobro_dramatic_piano_2,2,false)
+		
 		global.personGrabbed = instance_create_depth(overlapPerson.x,overlapPerson.y,1,personGrabbed);
 		
 		global.personGrabbed.y = y;
@@ -81,9 +83,19 @@ if(global.personGrabbed != noone)
 	sprite_index = hand_closed
 	if (y > global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION && lastY < global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION)
 	{
-			audio_play_sound(_water_plunge,2,false)
-			audio_play_sound(_splash_down_,2,false)
-			audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading,2,false)
+			if(!audio_is_playing(_water_plunge))
+			{
+				audio_play_sound(_water_plunge,2,false)
+			}
+			if(!audio_is_playing(_splash_down_))
+			{
+				audio_play_sound(_splash_down_,2,false)
+			}
+			if(!audio_is_playing(_robinhood76_01260_water_swimming_splashing_1_edited_fading))
+			{
+				audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading,2,false)
+			}
+			
 	}
 }
 else if(overlapPerson != noone)
