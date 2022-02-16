@@ -71,12 +71,14 @@ function jerkAway()
 	{
 		jerkRadius = MAX_JERK_DIST;	
 	}
+
 	jerkX = random_range(0,1) * jerkRadius * choose(-1,1);
 	jerkY = sqrt(jerkRadius * jerkRadius - jerkX * jerkX) * -1;
 	//mover
 	//begin moving
 	
-	move_towards_point(x+jerkX,y+jerkY,jerkDuration * room_speed)
+	var len = sqrt((jerkX * jerkX + jerkY * jerkY));
+	move_towards_point(x+jerkX,y+jerkY, len/(jerkDuration * room_speed))
 	alarm[3] = room_speed * jerkDuration
 	
 }
@@ -84,8 +86,9 @@ function jerkAway()
 function jerkBack()
 {
 	preparingToJerk = false;
-	jerking = true;	
-	move_towards_point(mouse_x,mouse_y,jerkDuration * room_speed)
+	jerking = true;
+	var len = sqrt((jerkX * jerkX + jerkY * jerkY));
+	move_towards_point(mouse_x,mouse_y, len/(jerkDuration * room_speed))
 	alarm[4] = room_speed * jerkDuration
 	//begin moving jerkaway
 }

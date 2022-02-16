@@ -111,7 +111,7 @@ else
 
 if (global.personGrabbed != noone && global.personGrabbed.y > (global.personGrabbed.floatLevel + global.FLOAT_LEVEL_VARIATION))
 {
-	show_debug_message(string(global.personGrabbed.Health))
+	//show_debug_message(string(global.personGrabbed.Health))
 	//show_debug_message(string(preparingToJerk))
 	//show_debug_message(string(jerking))
 	
