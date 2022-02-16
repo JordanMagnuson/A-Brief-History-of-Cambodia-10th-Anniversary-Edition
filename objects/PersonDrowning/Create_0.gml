@@ -84,9 +84,13 @@ function terrifyEveryone()
 			
 	// Game end
 	//if (true)
-	if ( instance_number(person_obj) && global.peopleKilled >= global.NUMBER_OF_PEOPLE && !global.gameEndController)
+	if (global.peopleKilled >= global.NUMBER_OF_PEOPLE)
 	{
-		instance_create_depth(5,5,depth,GameController)
+		//Make sure you are the only one left before starting game over
+		if(instance_number(PersonDrowning) == 1)
+		{
+			GameController.gameOver = true;
+		}
 	}
 	instance_destroy()
 			
