@@ -24,6 +24,9 @@ function changeToGasper()
 	s.image_angle = image_angle;
 	s.Health = Health
 	s.maxHealth = maxHealth
+	//slash up sound
+	audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading, 1, false);
+	
 if(audio_is_playing(_heartbeat_32424))
 {
 	audio_stop_sound(_heartbeat_32424)	
