@@ -11,17 +11,12 @@ else if(gameOver)
 	{
 		//set fadeout alpha
 		 a = 1 - (alarm_get(0) / (room_speed * 10));
-		 if(a < 1)
+		 if(a <= 1)
 		 {
 			 //draw black screen
 			draw_set_color(c_black);
 			draw_set_alpha(a);
 			draw_rectangle(0, 0, room_width, room_height, false);
-		 }
-		 else
-		 {
-			 alarm_set(0, room_speed * 10)
-			 room_goto_next();
 		 }
 	}
 	else
