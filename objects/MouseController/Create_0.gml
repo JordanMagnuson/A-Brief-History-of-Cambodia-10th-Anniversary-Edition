@@ -53,7 +53,7 @@ function jerkAway()
 		return;
 	}
 	
-	if(random_range(0,1) * jerkRadius > 2.5)
+	if(irandom_range(0,1) * jerkRadius > 2.5)
 	{
 		show_debug_message("bubbles")
 		releaseBubble()
