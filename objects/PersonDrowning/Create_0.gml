@@ -46,6 +46,8 @@ function startDrowning()
 	else if (global.peopleKilled == 2 && !!audio_is_playing(_hell_02))
 	{
 		global.ambientController.playSpecificSound(_hell_02);
+	
+		
 	}		
 	else if (global.peopleKilled == 3 && !audio_is_playing(_hell_03_))
 		{
@@ -89,7 +91,11 @@ function terrifyEveryone()
 		//Make sure you are the only one left before starting game over
 		if(instance_number(PersonDrowning) == 1)
 		{
-			GameController.gameOver = true;
+			
+	
+			gameending = true;
+			var ending = instance_find(GameController,0)
+			ending.gameOver = true
 		}
 	}
 	instance_destroy()
