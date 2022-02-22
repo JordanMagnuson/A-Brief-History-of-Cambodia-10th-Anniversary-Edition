@@ -13,8 +13,8 @@ alarm[1] = room_speed * 2;
 alarm[2] = room_speed * 3;
 instance_create_depth(x,y,depth,floatcontroller);
 
-
-
+// Camera
+instance_create_depth(0,0, -1, oCamera);
 
 
 

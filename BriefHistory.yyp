@@ -19,6 +19,7 @@
     {"id":{"name":"_robinhood76_01260_water_swimming_splashing_1_edited_fading","path":"sounds/_robinhood76_01260_water_swimming_splashing_1_edited_fading/_robinhood76_01260_water_swimming_splashing_1_edited_fading.yy",},"order":7,},
     {"id":{"name":"_pcaeldries_tide_23454","path":"sounds/_pcaeldries_tide_23454/_pcaeldries_tide_23454.yy",},"order":13,},
     {"id":{"name":"WaveController","path":"objects/WaveController/WaveController.yy",},"order":8,},
+    {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":19,},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":1,},
     {"id":{"name":"fade","path":"objects/fade/fade.yy",},"order":14,},
     {"id":{"name":"_hell_03_","path":"sounds/_hell_03_/_hell_03_.yy",},"order":2,},
