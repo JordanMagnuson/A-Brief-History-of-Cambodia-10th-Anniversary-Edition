@@ -43,6 +43,11 @@ if (scared)
 	x = quadInOut(t, initialX, xChange, 1);
 }
 
+if(!audio_is_playing(_heart_getting_faster_32424))
+{
+	audio_play_sound(_heart_getting_faster_32424,2,false)
+}
+
 //health loss
 if (Health > global.MIN_HEALTH)
 {
@@ -51,7 +56,7 @@ if (Health > global.MIN_HEALTH)
 else
 {
 	instance_create_depth(x,y,depth,PersonDrowning)
-	//sndHeartbeat.stop();
+	audio_stop_sound(_heart_getting_faster_32424)
 	instance_destroy()
 }
 

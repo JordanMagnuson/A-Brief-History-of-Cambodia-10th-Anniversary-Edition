@@ -31,7 +31,7 @@ function playSpecificSound(sound)
 	currentSound = sound;
 	fadeOutPosition = audio_sound_length(currentSound);
 	fadeOutPosition = fadeOutPosition - FADE_IN_DURATION;
-	audio_play_sound(currentSound,10,false)
+	audio_play_sound(currentSound,10,true)
 	audio_sound_gain(currentSound,0,0)
 	audio_sound_gain(currentSound,1,FADE_IN_DURATION  * room_speed)
 			
@@ -58,17 +58,16 @@ if (alarm[0] != -1) alarm[0] = -1;
 if (currentSound != noone && audio_is_playing(currentSound))audio_stop_sound(currentSound);			
 
 startedFade = false;
-	
-	if(lastSound != noone)
-	{
-		currentSound = lastSound	
-	}
-	else
-		currentSound = _hell_03_;
+
+do
+{
+	randomize()
+	currentSound = choose(_hell_01,_hell_02,_hell_03_)
+}	until(audio_is_playing(lastSound) != currentSound)
 	
 	fadeOutPosition = audio_sound_length(currentSound);
 	fadeOutPosition = fadeOutPosition ;
-	audio_play_sound(currentSound,10,false)
+	audio_play_sound(currentSound,10,true)
 	audio_sound_gain(currentSound,0,0)
 	audio_sound_gain(currentSound,1,FADE_IN_DURATION  * room_speed)
 }
