@@ -45,7 +45,7 @@ if (scared)
 
 if(!audio_is_playing(_heart_getting_faster_32424))
 {
-	audio_play_sound(_heart_getting_faster_32424,2,false)
+	audio_play_sound(_heart_getting_faster_32424,2,true)
 }
 
 //health loss
