@@ -8,6 +8,7 @@
     {"id":{"name":"bloodOverlay","path":"objects/bloodOverlay/bloodOverlay.yy",},"order":18,},
     {"id":{"name":"hand_closed","path":"sprites/hand_closed/hand_closed.yy",},"order":3,},
     {"id":{"name":"personFloating","path":"objects/personFloating/personFloating.yy",},"order":4,},
+    {"id":{"name":"ImageLoadBar","path":"extensions/ImageLoadBar/ImageLoadBar.yy",},"order":0,},
     {"id":{"name":"_heartbeat_single","path":"sounds/_heartbeat_single/_heartbeat_single.yy",},"order":5,},
     {"id":{"name":"AmbientController","path":"objects/AmbientController/AmbientController.yy",},"order":17,},
     {"id":{"name":"FadeTo","path":"scripts/FadeTo/FadeTo.yy",},"order":1,},
