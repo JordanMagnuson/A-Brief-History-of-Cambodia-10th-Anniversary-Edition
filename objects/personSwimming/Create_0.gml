@@ -28,14 +28,6 @@ function changeToGasper()
 	//slash up sound
 	audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading, 1, false);
 	
-if(audio_is_playing(_heartbeat_32424))
-{
-	audio_stop_sound(_heartbeat_32424)	
-}
 	instance_destroy(self);			
 }
 
-if(!audio_is_playing(_heartbeat_32424))
-{
-	audio_play_sound(_heartbeat_32424,2,true)	
-}

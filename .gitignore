@@ -1,0 +1,17 @@
+# Ignore working directories.
+/working/
+/steam release/
+/Walk or Die 10th Anniversary/working/
+/Walk or Die 10th Anniversary/steam release/
+
+
+# Ignore build directory.
+/build/
+/Walk or Die 10th Anniversary/build/
+
+# Ignore Windows image file caches.
+Thumbs.db
+ehthumbs.db
+
+# Ignore Window folder config file.
+Desktop.ini

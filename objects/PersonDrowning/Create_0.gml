@@ -43,7 +43,7 @@ function startDrowning()
 	{
 		global.ambientController.playSpecificSound(_hell_01);
 	}	
-	else if (global.peopleKilled == 2 && !!audio_is_playing(_hell_02))
+	else if (global.peopleKilled == 2 && !audio_is_playing(_hell_02))
 	{
 		global.ambientController.playSpecificSound(_hell_02);
 	

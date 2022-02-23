@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+depth = 0;
 
 
 MIN_JERK_DIST = 0;
@@ -53,7 +54,7 @@ function jerkAway()
 		return;
 	}
 	
-	if(irandom_range(0,1) * jerkRadius > 2.5)
+	if(random_range(0,1) * jerkRadius > 2.5 && alarm[3] == -1)
 	{
 		show_debug_message("bubbles")
 		releaseBubble()
@@ -115,4 +116,4 @@ function releaseBubble()
 	
 }
 
-jerkAway()
+alarm[1] = room_speed * 1
