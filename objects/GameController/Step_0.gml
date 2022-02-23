@@ -1,6 +1,7 @@
 //Continue on click
 //Fade In
-if(mouse_check_button_pressed(mb_left) and draw)
+//if(mouse_check_button_pressed(mb_left) and draw)
+if(draw)
 {
 	//set image offscreen just in case
 	x = room_width;
