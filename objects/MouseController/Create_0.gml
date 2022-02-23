@@ -58,7 +58,6 @@ function jerkAway()
 		show_debug_message("bubbles")
 		releaseBubble()
 	}
-	
 	if(global.personGrabbed.Health > global.FADE_HEALTH)
 	{
 		jerkRadius = 100000 / power(global.personGrabbed.Health / 10, 5); 	

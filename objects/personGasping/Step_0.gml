@@ -46,3 +46,9 @@ if (scared)
 	x = quadInOut(t, initialX, xChange, 1);
 }
 
+
+//shake
+shakeAmount = 1 - ((Health-global.MIN_HEALTH) / (maxHealth - global.MIN_HEALTH));
+x += choose(shakeAmount, -shakeAmount);
+y += choose(shakeAmount, -shakeAmount);
+

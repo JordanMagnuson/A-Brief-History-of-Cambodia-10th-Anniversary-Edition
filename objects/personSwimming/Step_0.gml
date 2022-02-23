@@ -64,4 +64,11 @@ else
 	initX = x;
 y = quadInOut(t, initY, yDist, -1);
 
+//shake
+shakeAmount = 1 - ((Health-global.MIN_HEALTH) / (maxHealth - global.MIN_HEALTH));
+x += choose(shakeAmount, -shakeAmount);
+y += choose(shakeAmount, -shakeAmount);
+
+
+
 

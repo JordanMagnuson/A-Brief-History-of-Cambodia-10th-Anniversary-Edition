@@ -22,8 +22,9 @@ function changeToGasper()
 {
 	s = instance_create_depth(x, y, depth, personGasping);
 	s.image_angle = image_angle;
-	s.Health = Health
-	s.maxHealth = maxHealth
+	s.Health = Health;
+	s.maxHealth = maxHealth;
+	s.shakeAmount = shakeAmount;
 	//slash up sound
 	audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading, 1, false);
 	
