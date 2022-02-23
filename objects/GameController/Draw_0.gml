@@ -40,7 +40,7 @@ else
 		 //draw black screen
 		draw_set_color(c_black);
 		draw_set_alpha(a);
-		draw_rectangle(0, 0, room_width, room_height, false);
+		draw_rectangle(0, 0, oCamera.view_width, oCamera.view_height, false);
 	 }
 	 //reset draw alpha EACH STEP
 	 draw_set_alpha(1);
