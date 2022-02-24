@@ -38,12 +38,12 @@ function update()
 		
 		if(Health > 52)
 		{
-			if(!audio_is_playing(_heartbeat_32424) || audio_sound_get_gain(_heartbeat_32424) == 0)
+			if(!audio_is_playing(_heart_getting_faster_32424) || audio_sound_get_gain(_heart_getting_faster_32424) == 0)
 			{
 				var vol = clamp(Health,global.MIN_HEALTH,global.BASE_HEALTH)
-				audio_play_sound(_heartbeat_32424,2,true)
-				audio_sound_gain(_heartbeat_32424,vol,0)
-				audio_sound_gain(_heartbeat_32424,1,6 * room_speed)
+				audio_play_sound(_heart_getting_faster_32424,2,true)
+				audio_sound_gain(_heart_getting_faster_32424,vol,0)
+				audio_sound_gain(_heart_getting_faster_32424,1,6 * room_speed)
 				audio_play_sound(_drowning,2,true)
 				audio_sound_gain(_drowning,vol,0)
 				audio_sound_gain(_drowning,1,6 * room_speed)
@@ -53,7 +53,7 @@ function update()
 		else if (Health > global.MIN_HEALTH && !fading)
 		{
 			fading = true;
-			audio_stop_sound(_heartbeat_32424)
+			audio_stop_sound(_heart_getting_faster_32424)
 			audio_stop_sound(_drowning)
 			audio_play_sound(_heartbeat_single,2,false)
 		}
@@ -78,7 +78,13 @@ function removed()
 	//cancel heartbeet sound
 	//cancel drowning sound
 	//call person.remove function
-	audio_stop_sound(_drowning)
-	audio_stop_sound(_heartbeat_32424)
+	if(audio_is_playing(_heart_getting_faster_32424))
+	{
+		audio_stop_sound(_heart_getting_faster_32424)
+	}
+	if(audio_is_playing(_drowning))
+	{
+		audio_stop_sound(_drowning)
+	}
 	instance_destroy();
 }
