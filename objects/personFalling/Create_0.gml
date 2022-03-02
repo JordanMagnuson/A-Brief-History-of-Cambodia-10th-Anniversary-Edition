@@ -13,6 +13,8 @@ angleDir = choose(-1, 1);
 function changeToSwimmer()
 {
 	s = instance_create_depth(x, y, depth, personSwimming);
+	s.Health = Health;
+	s.maxHealth = maxHealth;
 	s.image_angle = image_angle;
 	instance_destroy(self);			
 }

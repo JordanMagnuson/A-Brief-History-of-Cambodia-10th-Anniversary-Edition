@@ -85,7 +85,6 @@ function changeToFloater()
 	instance_destroy(self);
 }
 
-
 alarm_set(1, getFloaterDelay() * room_speed);
 
 audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading,2,false)
