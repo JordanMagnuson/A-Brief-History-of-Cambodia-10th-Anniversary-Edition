@@ -7,7 +7,7 @@ if (scared and canBeScared)
 }
 
 //Swim Up
-if(alarm_get(2) <= 0)
+if(alarm_get(2) < 0)
 {
 	//if you hit the surface on the last movement, stop
 	if(hitSurface)
@@ -62,12 +62,16 @@ else
 
 //how much time has passed, as a proportion of total time alloted
 var t = (mt - alarm_get(2)) / mt;
-
-if(!scared)
-	x = quadInOut(t, initX, xDist, 1);
-else
-	initX = x;
-y = quadInOut(t, initY, yDist, -1);
+if(mt > 0)
+{
+	if(!scared)
+	{
+		x = quadInOut(t, initX, xDist, 1);
+	}
+	else
+		initX = x;
+	y = quadInOut(t, initY, yDist, -1);
+}
 
 //shake
 shakeAmount = 1 - ((Health-global.MIN_HEALTH) / (maxHealth - global.MIN_HEALTH));
