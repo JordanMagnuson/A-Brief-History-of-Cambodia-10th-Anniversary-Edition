@@ -82,8 +82,8 @@ target_view = 0;
 view_set_visible(target_view, true);
 
 // Set default width and height for our view.
-view_width_default = 800;
-view_height_default = 600;
+view_width_default = 1067;
+view_height_default = 800;
 aspect_default = view_width_default / view_height_default;
 view_width = view_width_default;
 view_height = view_height_default;
