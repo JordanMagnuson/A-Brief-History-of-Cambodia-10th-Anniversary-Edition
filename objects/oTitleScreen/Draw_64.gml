@@ -27,7 +27,7 @@ vs = surface_height / 32;
 // Title
 xx = surface_width/2;
 yy = surface_height/4;
-if (global.browser_width_hdpi < 600)
+if (global.browser_width_hdpi < 1000)
 	var title = "A BRIEF HISTORY\nOF CAMBODIA";
 else
 	var title = "A BRIEF HISTORY OF CAMBODIA";
