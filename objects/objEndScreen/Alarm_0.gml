@@ -1,0 +1,1 @@
+show_thanks_txt = true;

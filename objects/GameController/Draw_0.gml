@@ -7,7 +7,7 @@ if(draw)
 //Game End
 else if(gameOver)
 {
-	if(room == room_first)
+	if(room == Room1)
 	{
 		//set fadeout alpha
 		 a = 1 - (alarm_get(0) / (room_speed * 10));

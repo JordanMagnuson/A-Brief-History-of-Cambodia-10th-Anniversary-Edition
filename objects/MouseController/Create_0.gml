@@ -1,3 +1,6 @@
+if (global.is_touch_device)
+	visible = false;
+
 /// @description Insert description here
 // You can write your code in this editor
 depth = 0;
