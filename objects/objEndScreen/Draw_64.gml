@@ -17,7 +17,7 @@ vs = floor(surface_height / 10);
 xx = surface_width/2;
 yy = surface_height/3;
 
-var title = "Thanks for playing.";
+var title = "Between 1975 and 1979\none quarter of Cambodia's population\ndied under Pol Pot's Khmer Rouge regime\nin what may have been\nthe worst autogenocide\nof human history.";
 string_h = global.gui_scale * fnt_scale * string_height(title);	
 draw_text_transformed(xx, yy, title, global.gui_scale*fnt_scale, global.gui_scale*fnt_scale, 0);
 draw_set_alpha(1);
