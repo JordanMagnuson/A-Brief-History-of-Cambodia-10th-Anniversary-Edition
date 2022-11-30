@@ -57,9 +57,9 @@ function jerkAway()
 		return;
 	}
 	
-	if(random_range(0,1) * jerkRadius > 2.5 && alarm[3] == -1)
+	if(random(0.5) * jerkRadius > 2.5)
 	{
-		show_debug_message("bubbles")
+		show_debug_message("call releaseBubble()")
 		releaseBubble()
 	}
 	if(global.personGrabbed.Health > global.FADE_HEALTH)

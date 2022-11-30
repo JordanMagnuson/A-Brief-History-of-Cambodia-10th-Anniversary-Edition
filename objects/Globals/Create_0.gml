@@ -19,8 +19,8 @@ global.BASE_HEALTH = 100;
 global.HEALTH_VARIATION = 25;
 global.MIN_HEALTH = 50;
 global.FADE_HEALTH = 60;
-global.HEALTH_LOSS_RATE = 0.05 * (30/room_speed);	// Should be room_speed dependent; original set for 30 FPS.
-global.HEALTH_GAIN_RATE = 0.1 * (30/room_speed);
+global.HEALTH_LOSS_RATE = 0.06 * (30/room_speed);	// Should be room_speed dependent; original set for 30 FPS.
+global.HEALTH_GAIN_RATE = 0.12 * (30/room_speed);
 
 global.BREATH_SCALE_MIN = 0.8;
 global.BREATH_SCALE_MAX = 1.2;
