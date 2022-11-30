@@ -36,7 +36,7 @@ function scare()
 		xChange *= -1;
 	}
 	//swap directions if moving would make instance leave room
-	if((x + xChange > room_width) or (x + xChange < 0))
+	if((x + xChange > oCamera.view_width) or (x + xChange < 0))
 	{
 		xChange *= -1;
 	}
