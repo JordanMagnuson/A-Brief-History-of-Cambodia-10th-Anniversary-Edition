@@ -63,9 +63,9 @@ function update()
 			Health = global.MIN_HEALTH - 1;
 		}
 	}
-	else if(audio_is_playing(_heartbeat_32424))
+	else if(audio_is_playing(_heart_getting_faster_32424) && audio_is_playing(_drowning))
 	{
-		audio_sound_gain(_heart_getting_faster_32424,0,1 * 1000)	
+		audio_sound_gain(_heart_getting_faster_32424,0,1000)	
 		audio_stop_sound(_drowning)
 	}
 	
