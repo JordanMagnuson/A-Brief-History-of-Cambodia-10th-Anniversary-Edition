@@ -104,7 +104,7 @@ function terrifyEveryone()
 function playDrowningSound()
 {
 			audio_play_sound(_drowning,2,false);
-			audio_sound_gain(_drowning,0,6  * room_speed);
+			audio_sound_gain(_drowning,0,6  * 1000);
 		
 }
 

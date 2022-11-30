@@ -88,4 +88,4 @@ function changeToFloater()
 alarm_set(1, getFloaterDelay() * room_speed);
 
 audio_play_sound(_robinhood76_01260_water_swimming_splashing_1_edited_fading,2,false)
-audio_sound_gain(_heart_getting_faster_32424,0,2 * room_speed)
+audio_sound_gain(_heart_getting_faster_32424,0,2 * 1000)

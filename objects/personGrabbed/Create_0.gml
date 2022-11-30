@@ -43,10 +43,10 @@ function update()
 				var vol = clamp(Health,global.MIN_HEALTH,global.BASE_HEALTH)
 				audio_play_sound(_heart_getting_faster_32424,2,true)
 				audio_sound_gain(_heart_getting_faster_32424,vol,0)
-				audio_sound_gain(_heart_getting_faster_32424,1,6 * room_speed)
+				audio_sound_gain(_heart_getting_faster_32424,1,6 * 1000)
 				audio_play_sound(_drowning,2,true)
 				audio_sound_gain(_drowning,vol,0)
-				audio_sound_gain(_drowning,1,6 * room_speed)
+				audio_sound_gain(_drowning,1,6 * 1000)
 			}
 			
 		}
@@ -65,7 +65,7 @@ function update()
 	}
 	else if(audio_is_playing(_heartbeat_32424))
 	{
-		audio_sound_gain(_heart_getting_faster_32424,0,1 * room_speed)	
+		audio_sound_gain(_heart_getting_faster_32424,0,1 * 1000)	
 		audio_stop_sound(_drowning)
 	}
 	

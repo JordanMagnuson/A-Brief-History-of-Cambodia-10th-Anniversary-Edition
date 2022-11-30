@@ -61,7 +61,7 @@ function playSound()
 //{		
 //	lastSound = currentSound;
 //	startedFade = true;
-//	audio_sound_gain(currentSound,0,FADE_IN_DURATION  * room_speed)	
+//	audio_sound_gain(currentSound,0,FADE_IN_DURATION  * 1000)	
 //}
 
 // LEGACY: no longer used.
@@ -69,6 +69,6 @@ function playSound()
 //{
 //	lastSound = currentSound;
 //	startedFade = true;
-//	audio_sound_gain(currentSound,0,FADE_IN_DURATION  * room_speed)
+//	audio_sound_gain(currentSound,0,FADE_IN_DURATION  * 1000)
 //	alarm[1] = room_speed * FADE_IN_DURATION;
 //}
