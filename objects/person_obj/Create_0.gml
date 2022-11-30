@@ -25,7 +25,7 @@ timeToMove = -1;//	the amound of frames it will take to move
 
 function scare()
 {
-	show_debug_message("scared");
+	//show_debug_message("scared");
 	//Make person scared
 	scared = true;
 	
