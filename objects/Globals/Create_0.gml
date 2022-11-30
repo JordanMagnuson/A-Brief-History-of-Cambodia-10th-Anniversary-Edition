@@ -1,7 +1,8 @@
 /// @description Init Global Variables
 // You can write your code in this editor
 
-
+// Colors
+global.BLOOD_RED = make_color_rgb(167,3,3);
 
 // Constants
 global.WATER_LINE = 100;

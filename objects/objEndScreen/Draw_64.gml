@@ -4,7 +4,7 @@
 gpu_set_texfilter(false);
 
 // Set up text drawing.
-draw_set_color(c_white);
+draw_set_color(global.BLOOD_RED);
 draw_set_font(fnt04b03);
 fnt_scale = 2;
 draw_set_halign(fa_center);
