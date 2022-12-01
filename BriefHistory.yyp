@@ -48,6 +48,7 @@
     {"id":{"name":"_hell_02","path":"sounds/_hell_02/_hell_02.yy",},"order":3,},
     {"id":{"name":"Globals","path":"objects/Globals/Globals.yy",},"order":0,},
     {"id":{"name":"person_obj","path":"objects/person_obj/person_obj.yy",},"order":2,},
+    {"id":{"name":"spr_blood","path":"sprites/spr_blood/spr_blood.yy",},"order":9,},
     {"id":{"name":"_drowning","path":"sounds/_drowning/_drowning.yy",},"order":6,},
     {"id":{"name":"person_spr","path":"sprites/person_spr/person_spr.yy",},"order":0,},
     {"id":{"name":"_hell_01","path":"sounds/_hell_01/_hell_01.yy",},"order":4,},
