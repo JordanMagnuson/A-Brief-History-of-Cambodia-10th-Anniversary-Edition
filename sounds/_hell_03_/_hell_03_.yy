@@ -1,6 +1,7 @@
 {
+  "conversionMode": 0,
   "compression": 2,
-  "volume": 0.5,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "_hell_03_.wav",
-  "duration": 70.11266,
+  "soundFile": "_hell_03_.ogg",
+  "duration": 64.69063,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

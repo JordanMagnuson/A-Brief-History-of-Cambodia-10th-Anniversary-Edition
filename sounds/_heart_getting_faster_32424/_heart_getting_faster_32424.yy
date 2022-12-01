@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "_heart_getting_faster_32424.wav",
+  "soundFile": "_heart_getting_faster_32424.ogg",
   "duration": 32.0783768,
   "parent": {
     "name": "Sounds",

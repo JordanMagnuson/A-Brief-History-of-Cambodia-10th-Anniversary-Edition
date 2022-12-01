@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "_hell_01.wav",
+  "soundFile": "_hell_01.ogg",
   "duration": 42.4228745,
   "parent": {
     "name": "Sounds",
