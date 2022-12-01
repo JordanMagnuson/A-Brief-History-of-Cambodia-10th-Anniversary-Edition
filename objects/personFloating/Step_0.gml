@@ -9,9 +9,8 @@ image_xscale = scale;
 image_yscale = scale;
 
 //New Person Has been killed or terrified, can be scared by hand
-if((deadSoFar < global.peopleKilled or terrified) and distance_to_object(global.MouseController) < global.scareDistance)
+if(global.peopleKilled >= global.DEAD_BEFORE_SCARE && distance_to_object(global.MouseController) < global.scareDistance)
 {
-	deadSoFar = global.peopleKilled;
 	if(!terrified)
 		terrify();
 	if(!scared)
@@ -19,6 +18,9 @@ if((deadSoFar < global.peopleKilled or terrified) and distance_to_object(global.
 }
 else if(terrified and alarm_get(1) < 0)
 {
+	//show_debug_message("alarm to unterrify");
+	//alarm_set(1, 1 * room_speed);
+	
 	//Set unterrify alarm
 	switch(global.peopleKilled)
 	{
@@ -37,8 +39,13 @@ else if(terrified and alarm_get(1) < 0)
 		case 4:
 			alarm_set(1, 20 * room_speed);
 			break;
-		//Never unterrify
+		case 5:
+		case 6:
+		case 7:
+			//Never unterrify
+			break;			
 		default:
+			alarm_set(1, 30 * room_speed);
 			break;
 	}
 }

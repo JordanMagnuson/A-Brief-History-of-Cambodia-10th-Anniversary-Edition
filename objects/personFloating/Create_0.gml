@@ -15,7 +15,6 @@ alarm_set(2, bDuration * room_speed);
 //terrify-related vars
 shaking = false;
 shakeAmount = global.shakeAmount;
-deadSoFar = 0;	//total amount of killed person objects
 
 //floating-related vars
 MIN_ANGLE_CHANGE = 0;
